@@ -1,27 +1,26 @@
-.TopNavbarBrand {
-    color: white;
+.TopNavbar {
+    color:rgb(51, 163, 47);
+    
   }
   
   .NavbarItem {
-    color: white;
+    
     text-align: center;
   }
 
   .typeText {
-    color: violet;
+    color: rgb(51, 163, 47);
 }
 
 .centerIt {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     width: 50%;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
   }
 
   .footer{
-    background-color: #D1C4E9;
+    background-color:rgb(51, 163, 47);
     margin:0px ;
     padding:0px;
-    padding: 20px 0px 20px 0px;
+    padding: 10px 0px 0px 0px;
 }
