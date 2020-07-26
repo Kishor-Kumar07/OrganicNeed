@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Button } from 'reactstrap';
+import {  Row, Col } from 'reactstrap';
 import '../Styles/style.css'
 import Header from '../Component/header.js'
 import Products from '../Component/products.js'

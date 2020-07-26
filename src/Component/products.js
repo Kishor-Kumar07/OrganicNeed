@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-import HorizontalGallery from 'react-dynamic-carousel'
 import Carousel,{consts} from "react-elastic-carousel";
-import Item from "react-elastic-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Card,CardBody, CardText, CardImg,Button,Container } from 'reactstrap';
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import rice from '../Images/rice.jpg'
 const responsive = {
   desktop: {
@@ -74,7 +70,7 @@ render()
   <Container><Carousel loop enableAutoPlay={true} pagination={false} renderArrow={this.myArrow} breakPoints={this.breakPoints}>
 {example.map(x=>(
     <div>
-         <Card >
+         <Card style={{borderRadius:'10px'}}>
            <CardImg src={rice} />
            <CardBody>
            <CardText>
