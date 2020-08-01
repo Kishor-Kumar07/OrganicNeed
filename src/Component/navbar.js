@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Collapse,  Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse,  Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink,Row,Col } from 'reactstrap';
 import { NavLink as RRNavLink } from 'react-router-dom';
+import logo from '../Images/organiclogo502.jpg'
 import '../Styles/style.css'
 class Header extends Component {
 
@@ -29,13 +30,16 @@ class Header extends Component {
   render() {
     return (
       <div>
+        <Row style={{margin:'0px',alignItems:'center'}}>
+          <Col md={11} sm={10} xs={9}>
         <Navbar expand="md" className='TopNavbar' light>
           <NavbarBrand href="/" className='TopNavbarBrand'>
+            
             Organic Need
           </NavbarBrand>
-          <NavbarToggler onClick={this.toggleNavbar} />
-          <Collapse isOpen={this.state.collapsed} navbar>
-            <Nav navbar pills>
+          <NavbarToggler onClick={this.toggleNavbar} aria-controls="items" />
+          <Collapse isOpen={this.state.collapsed} navbar id="items">
+            <Nav navbar pills className="items">
               <NavItem>
                 <NavLink tag={RRNavLink} onClick={this.closeNavbar} className='NavbarItem' to='/' activeClassName="active" exact path="/" activeStyle={{backgroundColor: 'violet', color: 'white'}}> Home </NavLink>
               </NavItem>
@@ -52,7 +56,12 @@ class Header extends Component {
             </Nav>
           </Collapse>
         </Navbar>
-
+        </Col>
+        <Col md={1} xs={3} sm={2} >
+        <i  className="fa fa-shopping-bag fa-2x" style={{color:'rgb(51, 163, 47)'}}/>
+        <span style={{ position: "absolute" }}>2</span>
+        </Col>
+</Row>
       </div>
     );
   }

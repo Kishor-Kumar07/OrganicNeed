@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Styles/style.css'
 import { Row,Col,Button } from 'reactstrap';
+import {Link} from 'react-router-dom';
 function Footer(props) {
     return(
     
@@ -21,7 +22,12 @@ function Footer(props) {
                 <Col md={3}>
                 <ul className="list-unstyled">
                     <li><h5 style={{color:"rgb(51, 163, 47)"}}>Services</h5></li>
-                        <li><a href="#" style={{textDecoration:'none',color:'black'}}>About Us</a></li>
+                        <li><Link to={{
+  pathname: '/kishore',
+  state:{
+      from:true
+  }
+}}style={{textDecoration:'none',color:'black'}} >About Us</Link></li>
                         <hr />
                         <li><a href="#" style={{textDecoration:'none',color:'black'}}>Faq's</a></li>
                         <hr />
@@ -64,6 +70,9 @@ function Footer(props) {
                </Button>
                <Button style={{color:"rgb(51, 163, 47)",backgroundColor:'white'}}>
                <i className="fa fa-instagram" aria-hidden="true"/>
+               </Button>
+               <Button style={{color:"rgb(51, 163, 47)",backgroundColor:'white'}}>
+               <i className="fa fa-envelope" aria-hidden="true"/>
                </Button>
                </Col>
                 </Row>

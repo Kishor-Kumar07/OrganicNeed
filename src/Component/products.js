@@ -3,6 +3,7 @@ import Carousel,{consts} from "react-elastic-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Card,CardBody, CardText, CardImg,Button,Container } from 'reactstrap';
 import rice from '../Images/rice.jpg'
+import '../Styles/style.css'
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -68,13 +69,15 @@ render()
     return(
 <div >
   <Container><Carousel loop enableAutoPlay={true} pagination={false} renderArrow={this.myArrow} breakPoints={this.breakPoints}>
-{example.map(x=>(
+{this.state.prod.map(x=>(
     <div>
          <Card style={{borderRadius:'10px'}}>
-           <CardImg src={rice} />
+           <CardImg src={x.image} />
            <CardBody>
-           <CardText>
-               {x}
+           <CardText className="text">
+           <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
+               {<i  className="fa fa-shopping-bag" />}
+               </Button>
            </CardText>
            </CardBody> 
            </Card>    
