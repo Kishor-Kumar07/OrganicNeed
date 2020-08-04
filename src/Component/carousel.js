@@ -6,9 +6,10 @@ import nuts from '../Images/nuts.jpg'
 import beauty from '../Images/beauty.jpg'
 import spice from '../Images/spice.jpg'
 import pulses from '../Images/pulses.jpg'
-class Carousel extends Component{
-render()
-{
+import {useStore} from './store.js'
+function Carousel(){
+
+  
 return(
 <Container>
   <Row>
@@ -90,6 +91,6 @@ return(
 </Container>
 )
 }
-}
+
 
 export default Carousel;

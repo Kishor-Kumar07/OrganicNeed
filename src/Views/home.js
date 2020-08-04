@@ -6,6 +6,19 @@ import Products from '../Component/products.js'
 import Category from '../Component/carousel.js'
 import Footer from '../Component/footer.js'
 class Home extends Component {
+    constructor(props)
+    {
+        super(props)
+        this.state={
+            prod:[]
+        }
+    }
+    async componentDidMount()
+    {
+        var output;
+    output = await (await fetch('http://13.232.137.75:5000/api/products')).json()
+    this.setState({ prod: output,fetched:true })
+    }
     render() {
         return (
             <div>
@@ -19,9 +32,7 @@ class Home extends Component {
                 <br /><br />
                 <Category />
                 <br /><br />
-                  <Products />
-                  <br /><br />
-                  <Products />
+                  <Products product={this.state.prod}/>
                   <br /><br />
                   <h4 className="text">Follow Us</h4>
                   <Container>

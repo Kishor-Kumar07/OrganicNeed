@@ -4,104 +4,60 @@ import "react-multi-carousel/lib/styles.css";
 import { Card,CardBody, CardText, CardImg,Button,Container } from 'reactstrap';
 import rice from '../Images/rice.jpg'
 import '../Styles/style.css'
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 8,
-    slidesToSlide: 1 // optional, default to 1.
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
-    slidesToSlide: 1 // optional, default to 1.
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-    slidesToSlide: 1 // optional, default to 1.
-  }
-};
-const example = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20];
-let pointer = null
- class products extends Component{
-constructor(props){
-  super(props)
-  this.items= [
-    {id: 1, title: 'item #1'},
-    {id: 2, title: 'item #2'},
-    {id: 3, title: 'item #3'},
-    {id: 4, title: 'item #4'},
-    {id: 5, title: 'item #5'}
-  ]
-  this.breakPoints = [
-    { width: 1, itemsToShow: 1 },
-    { width: 550, itemsToShow: 2, itemsToScroll: 2 },
-    { width: 850, itemsToShow: 3 },
-    { width: 1150, itemsToShow: 4, itemsToScroll: 2 },
-    { width: 1450, itemsToShow: 5 },
-    { width: 1750, itemsToShow: 6 },
-  ]
-  this.state={
-    prod:[],
-    fetched:false
-  }
-}
-myArrow({ type, onClick, isEdge }) {
-  pointer = type === consts.PREV ? '👈' : '👉'
+import {useStore} from './store.js'
+const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 550, itemsToShow: 2, itemsToScroll: 2 },
+  { width: 850, itemsToShow: 3 },
+  { width: 1150, itemsToShow: 4, itemsToScroll: 2 },
+  { width: 1450, itemsToShow: 5 },
+  { width: 1750, itemsToShow: 6 },
+]
+ function Products(props){
+
+ function myArrow({ type, onClick, isEdge }) {
+ const pointer = type === consts.PREV ? '👈' : '👉'
   return (
     <Button style={{paddingLeft:'20px',paddingRight:'20px',background:'transparent',border:'none',borderColor:'none'}} onClick={onClick} disabled={isEdge}>
       {pointer}
     </Button>
   )
 }
-  async componentDidMount() {
-    var output;
-    output = await (await fetch('http://13.232.137.75:5000/api/products')).json()
-    this.setState({ prod: output,fetched:true })
-    console.log(this.state.prod)
-  }
-render()
-{
-
-
-  if(this.state.fetched)
-  {
+  
+  const update = useStore(state => state.update)
+  
+ 
     return(
 <div >
-  <Container><Carousel loop enableAutoPlay={true} pagination={false} renderArrow={this.myArrow} breakPoints={this.breakPoints}>
-{this.state.prod.map(x=>(
+   <Container><Carousel loop enableAutoPlay={true} pagination={false} renderArrow={myArrow} breakPoints={breakPoints}>
+ {props.product.map(x=>(
     <div>
          <Card style={{borderRadius:'10px'}}>
            <CardImg src={x.image} />
            <CardBody>
            <CardText className="text">
-           <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
+             <h4>{x.englishname}</h4>
+           <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}} onClick={()=>update(x)}>
                {<i  className="fa fa-shopping-bag" />}
                </Button>
            </CardText>
            </CardBody> 
            </Card>    
     </div> 
-))}
+))} 
 
 </Carousel>
+
 </Container>
 
 </div>
     )
 }
-else
-{
-  return(
-  <div>
 
-  </div>
-  )
-}
-}
 
- }
- export default products;
+
+ 
+ export default Products;
 
   
   
