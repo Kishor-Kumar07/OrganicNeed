@@ -5,19 +5,32 @@ import Header from '../Component/header.js'
 import Products from '../Component/products.js'
 import Category from '../Component/carousel.js'
 import Footer from '../Component/footer.js'
+import deliver from '../Images/delivery.jpg'
 class Home extends Component {
     constructor(props)
     {
         super(props)
         this.state={
-            prod:[]
+            prod:[],
+            oil:[],
+            nut:[],
+            pulse:[],
+            rice:[],
+            spice:[],
+            beauty:[]
         }
     }
     async componentDidMount()
     {
-        var output;
+        var output,oil,rice,spice,pulse,beauty,nut;
     output = await (await fetch('http://13.232.137.75:5000/api/products')).json()
-    this.setState({ prod: output,fetched:true })
+    oil= await(await fetch('http://13.232.137.75:5000/api/products?category=Oil')).json()
+    rice= await(await fetch('http://13.232.137.75:5000/api/products?category=Rice')).json()
+    spice= await(await fetch('http://13.232.137.75:5000/api/products?category=Spice')).json()
+    pulse= await(await fetch('http://13.232.137.75:5000/api/products?category=Pulse')).json()
+    beauty= await(await fetch('http://13.232.137.75:5000/api/products?category=Beauty products')).json()
+    nut= await(await fetch('http://13.232.137.75:5000/api/products?category=Nut')).json()
+    this.setState({ prod: output,fetched:true,oil:oil,spice:spice,nut:nut,rice:rice,beauty:beauty,pulse:pulse })
     }
     render() {
         return (
@@ -25,12 +38,15 @@ class Home extends Component {
            
                 <br /><br />
                 <Row style={{margin:'0px'}}>
-                    <Col className="offset-md-3" md={8}>
+                    <Col md={4}>
+                     <img src={deliver}/>
+                    </Col>
+                    <Col  md={8}>
                     <Header />
                     </Col>
                 </Row>
                 <br /><br />
-                <Category />
+                <Category state={this.state}/>
                 <br /><br />
                   <Products product={this.state.prod}/>
                   <br /><br />

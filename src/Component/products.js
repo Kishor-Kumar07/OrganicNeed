@@ -36,7 +36,7 @@ const breakPoints = [
            <CardImg src={x.image} />
            <CardBody>
            <CardText className="text">
-             <h4>{x.englishname}</h4>
+            {/* <h6>{x.englishname}</h6> */}
            <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}} onClick={()=>update(x)}>
                {<i  className="fa fa-shopping-bag" />}
                </Button>

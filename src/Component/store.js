@@ -2,7 +2,14 @@ import create from 'zustand'
 
  const [useStore] = create(set => ({
     product: [],
-    update: (prop) => set(state => ({product:[...state.product, prop]}))
+    rice:[],
+    oil:[],
+    beauty:[],
+    nut:[],
+    spice:[],
+    pulse:[],
+    update: (prop) => set(state => ({product:[...state.product, prop]})),
+    updateprod: (output,name) => set(state => ({[name]:output}))
   }))
 
   

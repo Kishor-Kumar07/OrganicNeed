@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect ,useState} from 'react';
 import { Card, CardText, CardImg,Container,Row,Col, Button, CardDeck } from 'reactstrap';
 import rice from '../Images/rice.jpg'
 import oil from '../Images/oilposter.jpg'
@@ -6,10 +6,19 @@ import nuts from '../Images/nuts.jpg'
 import beauty from '../Images/beauty.jpg'
 import spice from '../Images/spice.jpg'
 import pulses from '../Images/pulses.jpg'
+import {Link} from 'react-router-dom'
 import {useStore} from './store.js'
-function Carousel(){
+import axios from 'axios'
 
-  
+function Carousel(props){
+console.log(props.state)
+const updateprod = useStore(state => state.updateprod)
+updateprod(props.state.oil,'oil')
+updateprod(props.state.spice,'spice')
+updateprod(props.state.rice,'rice')
+updateprod(props.state.nut,'nut')
+updateprod(props.state.beauty,'beauty')
+updateprod(props.state.pulse,'pulse')
 return(
 <Container>
   <Row>
@@ -19,10 +28,13 @@ return(
         <CardText className="text">
           <h6 >Rice acts as a  quick source of energy and also rich in carbohydrate and B vitamins.</h6>
           <br />
+          <Link to='/category/rice'>
           <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
             Shop Now
-            </Button> 
+            </Button>
+            </Link>
         </CardText>
+       
       </Card>
     </Col>
     <Col md={4}>
@@ -31,9 +43,11 @@ return(
         <CardText className="text">
           <h6 >Organic nuts can lower your risk of diabetes , heart disease and will improve the quality of our life</h6>
        
-        <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
+          <Link to='/category/nut'>
+          <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
             Shop Now
-            </Button> 
+            </Button>
+            </Link>
         </CardText>
       </Card>
     </Col>
@@ -43,9 +57,11 @@ return(
         <CardText className="text">
           <h6 >Organic Spices protect us from acute and chronic diseases.</h6>
           <br />
-        <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
+          <Link to='/category/spice'>
+          <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
             Shop Now
-            </Button> 
+            </Button>
+            </Link> 
         </CardText>
       </Card>
     </Col>
@@ -57,9 +73,11 @@ return(
         <CardImg src={oil} />
         <CardText className="text">
           <h6>Organic Oils are necessary to supply energy to our body and to keep our skin healthy and glowing.</h6>
-        <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
+          <Link to='/category/oil'>
+          <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
             Shop Now
-            </Button> 
+            </Button>
+            </Link> 
         </CardText>
       </Card>
     </Col>
@@ -69,9 +87,11 @@ return(
         <CardText className="text">
           <h6>Organic Pulses provide protein and fibre, and also act as a source of vitamins and minerals.</h6>
         <br />
+        <Link to='/category/pulse'>
         <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
             Shop Now
-            </Button> 
+            </Button>
+            </Link>
         </CardText>
       </Card>
     </Col>
@@ -81,9 +101,11 @@ return(
         <CardText className="text">
           <h6>Organic Beauty Products are better for your skin, health and also to the environment.</h6>
        <br />
-        <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
+       <Link to='/category/beauty'>
+          <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
             Shop Now
-            </Button> 
+            </Button>
+            </Link>
         </CardText>
       </Card>
     </Col>
