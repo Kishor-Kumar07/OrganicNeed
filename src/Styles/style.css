@@ -1,10 +1,8 @@
 .TopNavbar {
     color:rgb(51, 163, 47);
-    
   }
   
   .NavbarItem {
-    
     text-align: center;
   }
 
@@ -31,3 +29,65 @@
   padding-bottom: 25px;
 }
 
+@media(min-width:320px){
+  .logo{
+    width : 140px;
+  }
+}
+@media(min-width:360px){
+  .logo{
+    width : 160px;
+  }
+}
+
+@media(min-width:400px){
+  .logo{
+    width : 180px;
+  }
+}
+@media(min-width:450px){
+  .logo{
+    width : 200px;
+  }
+}
+@media(min-width:500px){
+  .logo{
+    width : 220px;
+  }
+}
+@media(min-width:575px){
+  .logo{
+    width : 240px;
+  }
+}
+@media(min-width:700px){
+  .logo{
+    width : 270px;
+  }
+}
+@media(min-width:767px){
+  .logo{
+    width : 270px;
+  }
+}
+@media(min-width:775px){
+  
+}
+@media(min-width:900px){
+ 
+}
+@media(min-width:1024px){
+ 
+}
+@media(min-width:1200px){
+  
+}
+@media(min-width:1440px){
+  
+}
+@media(min-width:1500px){
+ 
+}
+@media(min-width:1600px){
+  
+}

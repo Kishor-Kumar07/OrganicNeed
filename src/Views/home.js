@@ -39,7 +39,7 @@ class Home extends Component {
                 <br /><br />
                 <Row style={{margin:'0px'}}>
                     <Col md={4}>
-                     <img src={deliver}/>
+                     <img style={{height:'370px',width:'370px'}} src={deliver}/>
                     </Col>
                     <Col  md={8}>
                     <Header />
@@ -54,10 +54,10 @@ class Home extends Component {
                   <Container>
   <Row>
     <Col md={4}>
-       <Card style={{backgroundColor:'grey'}}>
+       <Card style={{backgroundColor:'#d3d3d3'}}>
            <CardText className="text">
                <i className="fa fa-instagram fa-4x" style={{color:'rgb(51, 163, 47)'}} /><br />
-               <h4>@OrganicNeed</h4>
+               <h4><span style={{color:'rgb(51, 163, 47)'}}>@Organic</span>Care</h4>
                <h5>Follow us on instagram</h5><br />
                <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
             Follow Us
@@ -67,10 +67,10 @@ class Home extends Component {
        </Card>
     </Col>
     <Col md={4}>
-       <Card style={{backgroundColor:'grey'}}>
+       <Card style={{backgroundColor:'#d3d3d3'}}>
            <CardText className="text">
                <i className="fa fa-whatsapp fa-4x" style={{color:'rgb(51, 163, 47)'}} /><br />
-               <h4>@OrganicNeed</h4>
+               <h4><span style={{color:'rgb(51, 163, 47)'}}>@Organic</span>Care</h4>
                <h5>Follow us on whatsapp</h5><br />
                <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
             Follow Us
@@ -80,10 +80,10 @@ class Home extends Component {
        </Card>
     </Col>
     <Col md={4}>
-       <Card style={{backgroundColor:'grey'}}>
+       <Card style={{backgroundColor:'#d3d3d3'}}>
            <CardText className="text">
                <i className="fa fa-linkedin fa-4x" style={{color:'rgb(51, 163, 47)'}} /><br />
-               <h4>@OrganicNeed</h4>
+               <h4><span style={{color:'rgb(51, 163, 47)'}}>@Organic</span>Care</h4>
                <h5>Follow us on LinkedIn</h5><br />
                <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
             Follow Us

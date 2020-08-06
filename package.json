@@ -27,6 +27,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-sidebar": "^3.0.2",
+    "react-simple-sidenav": "^2.0.0",
     "react-slick": "^0.27.0",
     "reactstrap": "^8.5.1",
     "slick-carousel": "^1.8.1",
