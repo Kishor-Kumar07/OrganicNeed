@@ -8,7 +8,14 @@ import create from 'zustand'
     nut:[],
     spice:[],
     pulse:[],
-    update: (prop) => set(state => ({product:[...state.product, prop]})),
+    update: (prop) =>
+    {
+    set(state => 
+      ({product:[...state.product, prop]}))
+ },
+    updatetrash:(name) =>{
+      set(state=> ({product:state.product.filter(item => item.englishname !== name)}))
+    },
     updateprod: (output,name) => set(state => ({[name]:output}))
   }))
 

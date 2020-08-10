@@ -23,13 +23,13 @@ class Home extends Component {
     async componentDidMount()
     {
         var output,oil,rice,spice,pulse,beauty,nut;
-    output = await (await fetch('http://13.232.137.75:5000/api/products')).json()
-    oil= await(await fetch('http://13.232.137.75:5000/api/products?category=Oil')).json()
-    rice= await(await fetch('http://13.232.137.75:5000/api/products?category=Rice')).json()
-    spice= await(await fetch('http://13.232.137.75:5000/api/products?category=Spice')).json()
-    pulse= await(await fetch('http://13.232.137.75:5000/api/products?category=Pulse')).json()
-    beauty= await(await fetch('http://13.232.137.75:5000/api/products?category=Beauty products')).json()
-    nut= await(await fetch('http://13.232.137.75:5000/api/products?category=Nut')).json()
+    output = await (await fetch('http://13.233.120.227:8080/api/products')).json()
+    oil= await(await fetch('http://13.233.120.227:8080/api/products?category=Oil')).json()
+    rice= await(await fetch('http://13.233.120.227:8080/api/products?category=Rice')).json()
+    spice= await(await fetch('http://13.233.120.227:8080/api/products?category=Spice')).json()
+    pulse= await(await fetch('http://13.233.120.227:8080/api/products?category=Pulse')).json()
+    beauty= await(await fetch('http://13.233.120.227:8080/api/products?category=Beauty products')).json()
+    nut= await(await fetch('http://13.233.120.227:8080/api/products?category=Nut')).json()
     this.setState({ prod: output,fetched:true,oil:oil,spice:spice,nut:nut,rice:rice,beauty:beauty,pulse:pulse })
     }
     render() {

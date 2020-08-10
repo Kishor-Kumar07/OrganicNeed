@@ -25,7 +25,7 @@ const breakPoints = [
 }
   
   const update = useStore(state => state.update)
-  
+  const product = useStore(state => state.product)
  
     return(
 <div >
@@ -37,7 +37,14 @@ const breakPoints = [
            <CardBody>
            <CardText className="text">
             {/* <h6>{x.englishname}</h6> */}
-           <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}} onClick={()=>update(x)}>
+           <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}} onClick={()=>
+            {
+              x.count=x.count+1
+              x.total=x.count*x.price
+            if(!product.includes(x))
+            update(x)
+          }
+           }>
                {<i  className="fa fa-shopping-bag" />}
                </Button>
            </CardText>

@@ -8,6 +8,7 @@ import ReactDrawer from 'react-drawer';
 import Sidebar from 'react-sidebar'
 import SideNav from 'react-simple-sidenav';
 import 'react-drawer/lib/react-drawer.css';
+import ScrollArea from 'react-scrollbar'
 function Header(){
   
 
@@ -30,12 +31,13 @@ function Header(){
  function onSetSidebarOpen(prop) {
   setOpen(prop);
 } 
+
     const product = useStore(state => state.product)
-    const element = product.map(prod=>(
-    <div>
-    <h5>{prod.englishname}</h5>
-    <i class="fa fa-bars" />
-    </div>
+    const updatetrash = useStore(state => state.updatetrash)
+    var array = product; 
+    var total=0;
+    product.map((prod,i)=>(
+      total+=prod.total
     ))
     return (
       <div>
@@ -96,7 +98,39 @@ function Header(){
       > */}
         <i  className="fa fa-shopping-bag fa-2x" style={{color:'rgb(51, 163, 47)'}} onClick={()=>onSetSidebarOpen(true)}/>
     <Badge style={{ position: "absolute" }} color="success">{product.length}</Badge>
-    <SideNav showNav={sidebarOpen} openFromRight="true" title="Organic Care Cart" titleStyle={{backgroundColor:'rgb(51, 163, 47)'}}  items={element} onHideNav={() => onSetSidebarOpen(false)} />
+    <SideNav showNav={sidebarOpen} openFromRight="true" title="Organic Care Cart" titleStyle={{backgroundColor:'rgb(51, 163, 47)'}}  children={
+      product.length>0?
+      (
+      <ScrollArea>
+      <div style={{paddingTop:'30px',paddingLeft:'50px'}}>
+      {product.map((prod,i)=>(
+      <div>
+        <img height="50px" src={prod.image}/>
+      <h6>{prod.englishname}<span style={{paddingLeft:'20px'}}><i class="fa fa-trash" style={{ color: 'red'}} onClick={()=>{
+        prod.count=0
+        prod.total=0
+        updatetrash(prod.englishname)}}/></span></h6>
+      <h6><span>{prod.count}</span> *  {prod.price}       <span style={{paddingLeft:'40px'}}>{prod.total}</span></h6>
+      </div>
+      ))}
+      <div style={{paddingTop:'30px',paddingBottom:'40px'}}>
+      <h5>{total}</h5>
+      <Button style={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>
+        View Cart
+      </Button>
+      <span style={{paddingLeft:'50px'}}>
+      <Button style={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>
+        Checkout
+      </Button>
+      </span>
+      </div>
+       </div>
+       </ScrollArea>)
+       :
+       <div>
+         <h5>Cart Is Empty</h5>
+       </div>
+    } onHideNav={() => onSetSidebarOpen(false)} />
     {/* </Sidebar> */}
     {/* <ReactDrawer
           open={open}
