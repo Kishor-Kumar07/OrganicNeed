@@ -1,6 +1,6 @@
 import Home from './Views/home.js'
-import Shop from './Views/shop.js'
-import Collection from './Views/collection.js'
+import Cart from './Views/cart.js'
+import Checkout from './Views/checkout.js'
 import Blogs from './Views/blogs.js'
 import Category from './Component/category'
 
@@ -16,14 +16,14 @@ const Routes = [
       component: Category
     },
     {
-      path: "/:handle",
-      name: "shop",
-      component: Shop
+      path: "/cart",
+      name: "cart",
+      component: Cart
     },
     {
-      path: "/collections",
-      name: "collection",
-      component: Collection
+      path: "/checkout",
+      name: "checkout",
+      component: Checkout
     },
     {
       path: "/blogs",

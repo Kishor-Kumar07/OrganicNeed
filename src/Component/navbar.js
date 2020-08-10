@@ -1,6 +1,6 @@
 import React, { Component ,useState} from "react";
 import { Collapse,  Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink,Row,Col, Button,Badge } from 'reactstrap';
-import { NavLink as RRNavLink } from 'react-router-dom';
+import { NavLink as RRNavLink ,Link} from 'react-router-dom';
 import logo from '../Images/logo.png'
 import '../Styles/style.css'
 import {useStore} from './store'
@@ -99,7 +99,9 @@ function Header(){
         <i  className="fa fa-shopping-bag fa-2x" style={{color:'rgb(51, 163, 47)'}} onClick={()=>onSetSidebarOpen(true)}/>
     <Badge style={{ position: "absolute" }} color="success">{product.length}</Badge>
     <SideNav showNav={sidebarOpen} openFromRight="true" title="Organic Care Cart" titleStyle={{backgroundColor:'rgb(51, 163, 47)'}}  children={
-      product.length>0?
+      <div>
+      <i class="fa fa-times-circle" style={{fontSize:'30px'}} onClick={()=>onSetSidebarOpen(false)}/>
+      {product.length>0?
       (
       <ScrollArea>
       <div style={{paddingTop:'30px',paddingLeft:'50px'}}>
@@ -115,13 +117,17 @@ function Header(){
       ))}
       <div style={{paddingTop:'30px',paddingBottom:'40px'}}>
       <h5>{total}</h5>
-      <Button style={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>
+      <Link to="/cart">
+      <Button style={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}} onClick={() => onSetSidebarOpen(false)}>
         View Cart
       </Button>
+      </Link>
       <span style={{paddingLeft:'50px'}}>
-      <Button style={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>
+      <Link to="/checkout">
+      <Button style={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}} onClick={() => onSetSidebarOpen(false)}>
         Checkout
-      </Button>
+      </Button> 
+      </Link> 
       </span>
       </div>
        </div>
@@ -129,6 +135,8 @@ function Header(){
        :
        <div>
          <h5>Cart Is Empty</h5>
+       </div>
+    }
        </div>
     } onHideNav={() => onSetSidebarOpen(false)} />
     {/* </Sidebar> */}

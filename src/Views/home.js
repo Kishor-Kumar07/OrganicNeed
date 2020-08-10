@@ -6,6 +6,8 @@ import Products from '../Component/products.js'
 import Category from '../Component/carousel.js'
 import Footer from '../Component/footer.js'
 import deliver from '../Images/delivery.jpg'
+import Typing from 'react-typing-animation'
+import {Lines} from 'react-preloaders'
 class Home extends Component {
     constructor(props)
     {
@@ -38,8 +40,11 @@ class Home extends Component {
            
                 <br /><br />
                 <Row style={{margin:'0px'}}>
-                    <Col md={4}>
-                     <img style={{height:'370px',width:'370px'}} src={deliver}/>
+                    <Col md={4} style={{paddingTop:'130px'}}>
+                     <Typing hideCursor={true} > 
+                         <span style={{color:'rgb(51, 163, 47)',fontSize:'30px'}}>Let food be thy medicine and medicine be thy food</span>
+                     </Typing>
+                     
                     </Col>
                     <Col  md={8}>
                     <Header />
@@ -53,10 +58,10 @@ class Home extends Component {
                   <h4 className="text">Follow Us</h4>
                   <Container>
   <Row>
-    <Col md={4}>
+    <Col md={4} style={{paddingBottom:'40px'}}>
        <Card style={{backgroundColor:'#d3d3d3'}}>
            <CardText className="text">
-               <i className="fa fa-instagram fa-4x" style={{color:'rgb(51, 163, 47)'}} /><br />
+               <i className="fa fa-instagram fa-3x" style={{color:'rgb(51, 163, 47)'}} /><br />
                <h4><span style={{color:'rgb(51, 163, 47)'}}>@Organic</span>Care</h4>
                <h5>Follow us on instagram</h5><br />
                <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
@@ -66,10 +71,10 @@ class Home extends Component {
            </CardText>
        </Card>
     </Col>
-    <Col md={4}>
+    <Col md={4} style={{paddingBottom:'40px'}}>
        <Card style={{backgroundColor:'#d3d3d3'}}>
            <CardText className="text">
-               <i className="fa fa-whatsapp fa-4x" style={{color:'rgb(51, 163, 47)'}} /><br />
+               <i className="fa fa-whatsapp fa-2x" style={{color:'rgb(51, 163, 47)'}} /><br />
                <h4><span style={{color:'rgb(51, 163, 47)'}}>@Organic</span>Care</h4>
                <h5>Follow us on whatsapp</h5><br />
                <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
@@ -79,10 +84,10 @@ class Home extends Component {
            </CardText>
        </Card>
     </Col>
-    <Col md={4}>
+    <Col md={4} style={{paddingBottom:'40px'}}>
        <Card style={{backgroundColor:'#d3d3d3'}}>
            <CardText className="text">
-               <i className="fa fa-linkedin fa-4x" style={{color:'rgb(51, 163, 47)'}} /><br />
+               <i className="fa fa-linkedin fa-2x" style={{color:'rgb(51, 163, 47)'}} /><br />
                <h4><span style={{color:'rgb(51, 163, 47)'}}>@Organic</span>Care</h4>
                <h5>Follow us on LinkedIn</h5><br />
                <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
@@ -94,7 +99,7 @@ class Home extends Component {
     </Col>
     </Row>
     </Container>
-                  <br /><br />
+                  
             <Footer />
             
             </div>

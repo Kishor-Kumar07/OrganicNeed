@@ -22,7 +22,7 @@ updateprod(props.state.pulse,'pulse')
 return(
 <Container>
   <Row>
-    <Col md={4}>
+    <Col md={4} style={{paddingBottom:'40px'}}>
       <Card style={{borderRadius:'10px'}}>
         <CardImg src={rice} />
         <CardText className="text">
@@ -37,7 +37,7 @@ return(
        
       </Card>
     </Col>
-    <Col md={4}>
+    <Col md={4} style={{paddingBottom:'40px'}}>
       <Card style={{borderRadius:'10px'}}>
         <CardImg src={nuts} />
         <CardText className="text">
@@ -51,7 +51,7 @@ return(
         </CardText>
       </Card>
     </Col>
-    <Col md={4}>
+    <Col md={4} style={{paddingBottom:'40px'}}>
       <Card style={{borderRadius:'10px'}}>
         <CardImg src={spice} />
         <CardText className="text">
@@ -66,9 +66,9 @@ return(
       </Card>
     </Col>
     </Row>
-    <br /> <br />
+    
     <Row>
-    <Col md={4}>
+    <Col md={4} style={{paddingBottom:'40px'}}>
       <Card style={{borderRadius:'10px'}}>
         <CardImg src={oil} />
         <CardText className="text">
@@ -81,7 +81,7 @@ return(
         </CardText>
       </Card>
     </Col>
-    <Col md={4}>
+    <Col md={4} style={{paddingBottom:'40px'}}>
       <Card style={{borderRadius:'10px'}}>
         <CardImg src={pulses} />
         <CardText className="text">
@@ -95,7 +95,7 @@ return(
         </CardText>
       </Card>
     </Col>
-    <Col md={4}>
+    <Col md={4} style={{paddingBottom:'40px'}}>
       <Card style={{borderRadius:'10px'}}>
         <CardImg src={beauty} />
         <CardText className="text">

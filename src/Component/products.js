@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component,useState } from 'react';
 import Carousel,{consts} from "react-elastic-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Card,CardBody, CardText, CardImg,Button,Container } from 'reactstrap';
+import { Card,CardBody, CardText, CardImg,Button,Container ,Spinner,Tooltip} from 'reactstrap';
 import rice from '../Images/rice.jpg'
 import '../Styles/style.css'
 import {useStore} from './store.js'
@@ -26,27 +26,52 @@ const breakPoints = [
   
   const update = useStore(state => state.update)
   const product = useStore(state => state.product)
- 
+  const [loading, setLoading] = useState(false)
+  const TooltipItem = props => {
+    const { item, id } = props;
+    const [tooltipOpen, setTooltipOpen] = useState(false);
+  
+    const toggle = () => setTooltipOpen(!tooltipOpen);
+  
+    return (
+      <span>
+        <Button id={"Tooltip-" + id} style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}} onClick={()=>{
+         setLoading( true );
+          setTimeout(() => {
+            setLoading( false);
+          }, 2000);
+        item.count=item.count+1
+        item.total=item.count*item.price
+      if(!product.includes(item))
+      update(item)
+     }}>
+              {loading && (
+            <Spinner size="sm" color="white"/>
+              )}
+               {!loading && <i  className="fa fa-shopping-bag" />}
+               </Button>
+        {(!loading && <Tooltip
+          placement='bottom'
+          isOpen={tooltipOpen}
+          target={"Tooltip-" + id}
+          toggle={toggle}
+        >
+         Add To Cart
+        </Tooltip>)}
+      </span>
+    );
+  };
     return(
 <div >
    <Container><Carousel loop enableAutoPlay={true} pagination={false} renderArrow={myArrow} breakPoints={breakPoints}>
- {props.product.map(x=>(
+ {props.product.map((x,id)=>(
     <div>
          <Card style={{borderRadius:'10px'}}>
            <CardImg src={x.image} />
            <CardBody>
            <CardText className="text">
             {/* <h6>{x.englishname}</h6> */}
-           <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}} onClick={()=>
-            {
-              x.count=x.count+1
-              x.total=x.count*x.price
-            if(!product.includes(x))
-            update(x)
-          }
-           }>
-               {<i  className="fa fa-shopping-bag" />}
-               </Button>
+            <TooltipItem key={id} item={x} id={id} />
            </CardText>
            </CardBody> 
            </Card>    

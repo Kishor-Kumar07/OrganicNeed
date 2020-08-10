@@ -61,7 +61,7 @@ function Footer(props) {
                     <p style={{color:'white'}}>© Copyright 2018 Ristorante Con Fusion</p>
                     
                 </Col>
-               <Col className="offset-md-1" md={4}>
+               <Col className="offset-md-1" md={4} style={{paddingBottom:'10px'}}>
                    <Button style={{color:"rgb(51, 163, 47)",backgroundColor:'white'}}>
                <i className="fa fa-whatsapp" aria-hidden="true"/>
                </Button>
