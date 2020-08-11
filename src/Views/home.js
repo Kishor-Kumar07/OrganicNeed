@@ -28,7 +28,7 @@ class Home extends Component {
     output = await (await fetch('http://13.233.120.227:8080/api/products')).json()
     oil= await(await fetch('http://13.233.120.227:8080/api/products?category=Oil')).json()
     rice= await(await fetch('http://13.233.120.227:8080/api/products?category=Rice')).json()
-    spice= await(await fetch('http://13.233.120.227:8080/api/products?category=Spice')).json()
+    spice= await(await fetch('http://13.233.120.227:8080/api/products?category=Spices')).json()
     pulse= await(await fetch('http://13.233.120.227:8080/api/products?category=Pulse')).json()
     beauty= await(await fetch('http://13.233.120.227:8080/api/products?category=Beauty products')).json()
     nut= await(await fetch('http://13.233.120.227:8080/api/products?category=Nut')).json()

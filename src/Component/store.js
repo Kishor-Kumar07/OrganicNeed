@@ -13,6 +13,14 @@ import create from 'zustand'
     set(state => 
       ({product:[...state.product, prop]}))
  },
+ plus:(index,product)=>{
+set(state => 
+  ({product:product.filter(item=>item)}))
+ },
+ minus:(index,product)=>{
+  set(state => 
+    ({product:product.filter(item=>item)}))
+   },
     updatetrash:(name) =>{
       set(state=> ({product:state.product.filter(item => item.englishname !== name)}))
     },

@@ -46,7 +46,7 @@ const breakPoints = [
       update(item)
      }}>
               {loading && (
-            <Spinner size="sm" color="white"/>
+            <i class="fa fa-spinner fa-pulse  fa-fw"></i>
               )}
                {!loading && <i  className="fa fa-shopping-bag" />}
                </Button>
