@@ -45,7 +45,7 @@ function Header(){
         <Col md={4} sm={8} xs={5}>
         <img className="logo" src={logo}/>
         </Col>
-          <Col md={6}  sm={2} xs={4} className="offset-xs-1">
+          <Col md={6}  sm={2} xs={4} className="offset-xs-1 ">
         <Navbar expand="md" className='TopNavbar' light>
           <NavbarToggler onClick={toggleNavbar} aria-controls="items" />
           <Collapse isOpen={collapsed} navbar id="items">
@@ -54,23 +54,11 @@ function Header(){
                 <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to='/' activeClassName="active" exact path="/" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}> Home </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to='/category/rice' activeClassName="active" exact path="/category/rice" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>Rice</NavLink>
-              </NavItem>
+                <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to="/aboutUs/" activeClassName="active" exact path="/aboutUs/" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>About Us</NavLink>
+              </NavItem >
               <NavItem>
-                <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to='/category/oil' activeClassName="active" exact path="/category/oil" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>Oil</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to='/category/nut' activeClassName="active" exact path="/category/nut" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>Nuts</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to='/category/pulse' activeClassName="active" exact path="/category/pulse" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>Pulses</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to='/category/beauty' activeClassName="active" exact path="/category/beauty" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>Beauty </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to='/category/spice' activeClassName="active" exact path="/category/spice" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>Spice</NavLink>
-              </NavItem>
+                <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to="/contactUs/" activeClassName="active" exact path="/contactUs/" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>contact Us</NavLink>
+              </NavItem >
               <NavItem>
                 <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to="/blogs/" activeClassName="active" exact path="/blogs/" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>Blogs</NavLink>
               </NavItem >

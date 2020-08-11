@@ -11,35 +11,32 @@ function Footer(props) {
                     
                     <ul className="list-unstyled">
                     <li><h5 style={{color:"rgb(51, 163, 47)"}}>Top Categories</h5></li>
-                        <li><a href="#" style={{textDecoration:'none',color:'black'}}>Fruits</a></li>
+                        <li><Link style={{textDecoration:'none',color:'black'}} to="/category/rice">Rice</Link></li>
                         <hr />
-                        <li><a href="#" style={{textDecoration:'none',color:'black'}}>Fast Foods</a></li>
+                        <li><Link style={{textDecoration:'none',color:'black'}} to="/category/oil">Oil</Link></li>
                         <hr />
-                        <li><a href="#" style={{textDecoration:'none',color:'black'}}>Vegetables</a></li>
-                        
-                    </ul>
+                        <li><Link style={{textDecoration:'none',color:'black'}} to="/category/pulse">Pulses</Link></li>
+                        <hr />
+                        <li><Link style={{textDecoration:'none',color:'black'}} to="/category/spice">Spices</Link></li>
+                        <hr />
+                        <li><Link style={{textDecoration:'none',color:'black'}} to="/category/nut">Nuts</Link></li>
+                        <hr />
+                        <li><Link style={{textDecoration:'none',color:'black'}} to="/category/beauty">Beauty Products</Link></li>
+                    
+                     </ul>
                 </Col>
                 <Col md={3}>
                 <ul className="list-unstyled">
                     <li><h5 style={{color:"rgb(51, 163, 47)"}}>Services</h5></li>
-                        <li><Link to={{
-  pathname: '/kishore',
-  state:{
-      from:true
-  }
-}}style={{textDecoration:'none',color:'black'}} >About Us</Link></li>
+                        <li><Link style={{textDecoration:'none',color:'black'}} >About Us</Link></li>
                         <hr />
                         <li><a href="#" style={{textDecoration:'none',color:'black'}}>Faq's</a></li>
                         <hr />
                         <li><a href="#" style={{textDecoration:'none',color:'black'}}>Contact Us</a></li>
-                        <hr />
-                        <li><a href="#" style={{textDecoration:'none',color:'black'}}>News</a></li>
-                        <hr />
-                        <li><a href="#" style={{textDecoration:'none',color:'black'}}>SiteMap</a></li>
                         
                     </ul>
                 </Col>
-                <Col md={4} className="align-self-center">
+                <Col md={3} >
                 <ul className="list-unstyled">
                 <li><h5 style={{color:"rgb(51, 163, 47)"}}>Privacy {"&"} Terms</h5></li>
                         <li><a href="#" style={{textDecoration:'none',color:'black'}}>Payment Policy</a></li>
@@ -62,18 +59,26 @@ function Footer(props) {
                     
                 </Col>
                <Col className="offset-md-1" md={4} style={{paddingBottom:'10px'}}>
+                   <a href="https://web.whatsapp.com" target="_blank">
                    <Button style={{color:"rgb(51, 163, 47)",backgroundColor:'white'}}>
                <i className="fa fa-whatsapp" aria-hidden="true"/>
                </Button>
+               </a>
+               <a href="https://facebook.com" target="_blank">
                <Button style={{color:"rgb(51, 163, 47)",backgroundColor:'white'}}>
                <i className="fa fa-facebook" aria-hidden="true"/>
                </Button>
+               </a>
+               <a href="https://instagram.com" target="_blank">
                <Button style={{color:"rgb(51, 163, 47)",backgroundColor:'white'}}>
                <i className="fa fa-instagram" aria-hidden="true"/>
                </Button>
+               </a>
+               <a href="https://gmail.com" target="_blank">
                <Button style={{color:"rgb(51, 163, 47)",backgroundColor:'white'}}>
                <i className="fa fa-envelope" aria-hidden="true"/>
                </Button>
+               </a>
                </Col>
                 </Row>
                 </div>
