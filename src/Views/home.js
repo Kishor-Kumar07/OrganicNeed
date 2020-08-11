@@ -40,11 +40,11 @@ class Home extends Component {
            
                 <br /><br />
                 <Row style={{margin:'0px'}}>
-                    <Col md={4} style={{paddingTop:'130px'}}>
-                     <Typist  > 
+                    <Col md={4} style={{paddingLeft:'20px',alignSelf:'center',alignItems:'center',paddingBottom:'20px'}}>
+                     {/* <Typist  > 
                         <h2 style={{color:'rgb(51, 163, 47)'}}> Let food be thy medicine and medicine be thy food</h2>
-                     </Typist>
-                     
+                     </Typist> */}
+                     <img src={deliver} className="deliver"/>
                     </Col>
                     <Col  md={8}>
                     <Header />

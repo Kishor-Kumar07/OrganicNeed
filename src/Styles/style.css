@@ -33,10 +33,17 @@
   .logo{
     width : 140px;
   }
+  .deliver{
+    width : 250px;
+    padding-left: 30px;
+  }
 }
 @media(min-width:360px){
   .logo{
     width : 160px;
+  }
+  .deliver{
+    width : 300px;
   }
 }
 
@@ -44,46 +51,89 @@
   .logo{
     width : 180px;
   }
+  .deliver{
+    width : 330px;
+  }
 }
 @media(min-width:450px){
   .logo{
     width : 200px;
+  }
+  .deliver{
+    width : 400px;
   }
 }
 @media(min-width:500px){
   .logo{
     width : 220px;
   }
+  .deliver{
+    width : 450px;
+  }
 }
 @media(min-width:575px){
   .logo{
     width : 240px;
   }
+  .deliver{
+    width : 500px;
+  }
 }
 @media(min-width:700px){
   .logo{
-    width : 270px;
+    width : 330px;
+  }
+  .deliver{
+    width : 630px;
   }
 }
 @media(min-width:767px){
   .logo{
-    width : 270px;
+    width : 200px;
+  }
+  .deliver{
+    width : 200px;
   }
 }
 @media(min-width:775px){
-  
+  .logo{
+    width : 230px;
+  }
+  .deliver{
+    width : 230px;
+  }
 }
 @media(min-width:900px){
- 
+  .logo{
+    width : 250px;
+  }
+  .deliver{
+    width : 250px;
+  }
 }
 @media(min-width:1024px){
- 
+  .logo{
+    width : 300px;
+  }
+  .deliver{
+    width : 300px;
+  }
 }
 @media(min-width:1200px){
-  
+  .logo{
+    width : 360px;
+  }
+  .deliver{
+    width : 360px;
+  }
 }
 @media(min-width:1440px){
-  
+  .logo{
+    width : 430px;
+  }
+  .deliver{
+    width : 430px;
+  }
 }
 @media(min-width:1500px){
  

@@ -35,10 +35,10 @@ class Header extends Component {
                   </Button>
               )
           }>
-                <div>
+                {/* <div>
                     <img src={slider1} />
                    
-                </div>
+                </div> */}
                 <div>
                 <img src={slider2} />
                 </div> 
