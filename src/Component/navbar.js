@@ -55,19 +55,25 @@ function Header(){
       prod.total=0
       updatetrash(prod.englishname)}}/></span>
     </span>
-    <h4 style={{paddingTop:'10px'}}><i disable={prod.count<2} class="fa fa-minus-square " onClick={()=>{
+    <h4 style={{paddingTop:'10px'}}><Button disabled={prod.count<2} style={{backgroundColor:'white',paddingRight:'10px',borderColor:'white'}} onClick={()=>{
       prod.count-=1
       prod.total=prod.count*prod.price
       minus(i,product)}} 
-      style={{paddingRight:'10px'}}/>{prod.count}<i class="fa fa-plus-square " onClick={()=>{
-        prod.count+=1
+      ><i  class="fa fa-minus " style={{color:'red'}} />
+      </Button>
+      {prod.count}
+      <Button style={{backgroundColor:'white',paddingLeft:'10px',borderColor:'white'}} onClick={()=>{
+      prod.count+=1
       prod.total=prod.count*prod.price
-        plus(i,product)}}
-         style={{paddingLeft:'10px'}}/><span style={{paddingLeft:'40px'}}>{prod.total}</span></h4>
+      plus(i,product)}} 
+      >
+      <i class="fa fa-plus " style={{color:'green'}} />
+         </Button><span style={{paddingLeft:'40px'}}>${prod.total}</span></h4>
     </div>
     ))}
     <div style={{paddingTop:'30px',paddingBottom:'40px'}}>
-    <h5>{total}</h5>
+    
+    <h5><b>Subtotal</b><span style={{paddingLeft:'100px'}}>${total}</span></h5>
     <span style={{paddingLeft:'70px'}}>
     <Link to="/checkout">
     <Button style={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}} onClick={() => onSetSidebarOpen(false)}>
