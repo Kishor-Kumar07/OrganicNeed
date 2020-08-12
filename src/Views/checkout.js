@@ -3,6 +3,7 @@ import {useStore} from '../Component/store'
 import {Container,Row,Col,Label,Form,Input,Button} from 'reactstrap'
 import { Card } from 'reactstrap'
 import { useForm } from 'react-hook-form';
+import logo from '../Images/logo.png'
 function Checkout() {
     const product = useStore(state => state.product)
     const { register, handleSubmit, errors } = useForm(); 
@@ -17,6 +18,12 @@ function Checkout() {
             position: 'absolute', left: '50%', top: '50%',
             transform: 'translate(-50%, -50%)',
             color: 'white'}}>
+                
+      <Row style={{paddingTop:'20px'}}>
+     <Col className="offset-md-2">
+     <img className="logo" src={logo}/>
+     </Col>
+      </Row>
       <Row style={{paddingTop:'20px'}}>
       <Col md={4} >
        <Label className="form-control" id='name' style={{borderColor:'white'}}>Name</Label>
