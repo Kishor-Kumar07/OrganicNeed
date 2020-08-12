@@ -50,7 +50,7 @@ function Header(){
     {product.map((prod,i)=>(
     <div>
       <span><img height="50px" src={prod.image} style={{paddingRight:'20px'}}/>  
-      {prod.englishname}<span style={{paddingLeft:'20px'}}><i class="fa fa-trash" style={{ color: 'red'}} onClick={()=>{
+      {prod.englishname}<span style={{paddingLeft:'100px'}}><i class="fa fa-trash" style={{ color: 'red'}} onClick={()=>{
       prod.count=0
       prod.total=0
       updatetrash(prod.englishname)}}/></span>

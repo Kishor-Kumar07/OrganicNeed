@@ -29,9 +29,9 @@ class Home extends Component {
     oil= await(await fetch('http://13.233.120.227:8080/api/products?category=Oil')).json()
     rice= await(await fetch('http://13.233.120.227:8080/api/products?category=Rice')).json()
     spice= await(await fetch('http://13.233.120.227:8080/api/products?category=Spices')).json()
-    pulse= await(await fetch('http://13.233.120.227:8080/api/products?category=Pulse')).json()
+    pulse= await(await fetch('http://13.233.120.227:8080/api/products?category=Pulses')).json()
     beauty= await(await fetch('http://13.233.120.227:8080/api/products?category=Beauty products')).json()
-    nut= await(await fetch('http://13.233.120.227:8080/api/products?category=Nut')).json()
+    nut= await(await fetch('http://13.233.120.227:8080/api/products?category=Nuts')).json()
     this.setState({ prod: output,fetched:true,oil:oil,spice:spice,nut:nut,rice:rice,beauty:beauty,pulse:pulse })
     }
     render() {

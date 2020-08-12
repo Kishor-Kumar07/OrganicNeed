@@ -39,7 +39,7 @@
   }
 }
 @media(min-width:360px){
-  .logo{
+  .logo{ 
     width : 160px;
   }
   .deliver{
