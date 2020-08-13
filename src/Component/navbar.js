@@ -22,12 +22,9 @@ function Header(){
   }
   function closeNavbar(){
     if(collapsed===true){
-      this.toggleNavbar();
+      toggleNavbar();
     }
   }
- function onDrawerClose(){
-   setOpen(false)
- }
  function onSetSidebarOpen(prop) {
   setOpen(prop);
 } 

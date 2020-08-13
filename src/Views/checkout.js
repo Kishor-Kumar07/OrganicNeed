@@ -15,7 +15,7 @@ function Checkout() {
             <Container>
       <form onSubmit={handleSubmit(onSubmit)}>
             <div className="cardalign" style={{
-            position: 'absolute', left: '50%', top: '55%',
+            position: 'absolute', left: '50%', top: '70%',
             transform: 'translate(-50%, -50%)',paddingBottom:'20px',
             color: 'white'}}>
                 
