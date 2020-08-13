@@ -32,10 +32,14 @@
 @media(min-width:320px){
   .logo{
     width : 140px;
+    padding-right: 50px;
   }
   .deliver{
     width : 250px;
     padding-left: 30px;
+  }
+  .cardalign{
+    top:90%
   }
 }
 @media(min-width:360px){
@@ -44,6 +48,9 @@
   }
   .deliver{
     width : 300px;
+  }
+  .cardalign{
+    top:80%
   }
 }
 
@@ -86,6 +93,9 @@
   .deliver{
     width : 630px;
   }
+  .cardalign{
+    top:50%
+  }
 }
 @media(min-width:767px){
   .logo{
@@ -102,6 +112,7 @@
   .deliver{
     width : 230px;
   }
+  
 }
 @media(min-width:900px){
   .logo{

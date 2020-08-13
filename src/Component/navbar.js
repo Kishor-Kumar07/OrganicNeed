@@ -91,15 +91,13 @@ function Header(){
     
     return (
       <div>
-        <Row style={{margin:'0px',paddingTop:'20px'}}>
-        <Col md={4} sm={8} xs={5}>
-        <img className="logo" src={logo}/>
-        </Col>
-          <Col md={6}  sm={2} xs={4} className="offset-xs-1 ">
-        <Navbar expand="md" className='TopNavbar' light>
+        
+        
+        <Navbar expand="lg" className='TopNavbar' light >
+          <NavbarBrand>  <img className="logo" src={logo}/></NavbarBrand>
           <NavbarToggler onClick={toggleNavbar} aria-controls="items" />
-          <Collapse isOpen={collapsed} navbar id="items">
-            <Nav navbar pills className="items">
+          <Collapse isOpen={collapsed} navbar id="items" >
+            <Nav navbar pills className="items" >
               <NavItem>
                 <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to='/' activeClassName="active" exact path="/" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}> Home </NavLink>
               </NavItem>
@@ -115,9 +113,16 @@ function Header(){
               
             </Nav>
           </Collapse>
+         <NavbarBrand >
+         <span style={{paddingRight:'20px'}}><i  className="fa fa-shopping-bag fa-2x" style={{color:'rgb(51, 163, 47)'}} onClick={()=>onSetSidebarOpen(true)}/>
+    <Badge style={{ position: "absolute" }} color="success">{product.length}</Badge></span>
+         </NavbarBrand>
         </Navbar>
-        </Col>
-        <Col md={1} xs={3} sm={2} className="offset-md-1" >
+
+    <SideNav showNav={sidebarOpen} openFromRight="true" title="Organic Care Cart"   children={
+      element
+    } onHideNav={() => onSetSidebarOpen(false)} />
+    
         {/* <Sidebar
         sidebar={<b>Sidebar content dfgdb adfgfsg gfbrssrb srrbgbhnysbgfffy fbynyngbgf</b>}
         open={sidebarOpen}
@@ -134,11 +139,7 @@ function Header(){
           overflowY: "auto"
         } }}
       > */}
-        <i  className="fa fa-shopping-bag fa-2x" style={{color:'rgb(51, 163, 47)'}} onClick={()=>onSetSidebarOpen(true)}/>
-    <Badge style={{ position: "absolute" }} color="success">{product.length}</Badge>
-    <SideNav showNav={sidebarOpen} openFromRight="true" title="Organic Care Cart" titleStyle={{backgroundColor:'rgb(51, 163, 47)'}}  children={
-      element
-    } onHideNav={() => onSetSidebarOpen(false)} />
+        
     {/* </Sidebar> */}
     {/* <ReactDrawer
           open={open}
@@ -152,8 +153,8 @@ function Header(){
         </ReactDrawer> */}
 
     {console.log(product)}
-        </Col>
-</Row>
+        
+
       </div>
     );
   }

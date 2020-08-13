@@ -4,6 +4,7 @@ import {Container,Row,Col,Label,Form,Input,Button} from 'reactstrap'
 import { Card } from 'reactstrap'
 import { useForm } from 'react-hook-form';
 import logo from '../Images/logo.png'
+import '../Styles/style.css'
 function Checkout() {
     const product = useStore(state => state.product)
     const { register, handleSubmit, errors } = useForm(); 
@@ -15,7 +16,7 @@ function Checkout() {
             <Container>
       <form onSubmit={handleSubmit(onSubmit)}>
             <div className="cardalign" style={{
-            position: 'absolute', left: '50%', top: '70%',
+            position: 'absolute', left: '50%', 
             transform: 'translate(-50%, -50%)',paddingBottom:'20px',
             color: 'white'}}>
                 
