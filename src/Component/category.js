@@ -20,7 +20,7 @@ import {useStore} from './store.js'
          setLoading( true );
           setTimeout(() => {
             setLoading( false);
-          }, 2000);
+          }, 1000);
         item.count=item.count+1
         item.total=item.count*item.price
       if(!products.includes(item))

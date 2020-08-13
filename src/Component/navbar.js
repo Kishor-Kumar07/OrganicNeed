@@ -50,7 +50,7 @@ function Header(){
     {product.map((prod,i)=>(
     <div>
       <span><img height="50px" src={prod.image} style={{paddingRight:'20px'}}/>  
-      {prod.englishname}<span style={{paddingLeft:'100px'}}><i class="fa fa-trash" style={{ color: 'red'}} onClick={()=>{
+      {prod.englishname}<span style={{paddingLeft:'30px'}}><i class="fa fa-trash" style={{ color: 'red'}} onClick={()=>{
       prod.count=0
       prod.total=0
       updatetrash(prod.englishname)}}/></span>
@@ -84,9 +84,10 @@ function Header(){
     </div>
      </div>
      </ScrollArea>)
-     :
-     <div>
-       <h5>Cart Is Empty</h5>
+     :  
+     <div style={{paddingLeft:'30%',paddingTop:'20%'}}>
+       <i class="fa fa-shopping-cart fa-5x" aria-hidden="true"/>
+       <h5 style={{paddingTop:'10%'}}>Cart is Empty</h5>
      </div>
   }
      </div>
