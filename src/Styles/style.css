@@ -9,7 +9,12 @@
   .typeText {
     color: rgb(51, 163, 47);
 }
-
+.toggle{
+  position:relative;
+  left: 1px;
+  right:1px;
+  margin: 0 auto;
+}
 .centerIt {
     display: block;
     width: 50%;

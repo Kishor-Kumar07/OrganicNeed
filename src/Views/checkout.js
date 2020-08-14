@@ -1,16 +1,55 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {useStore} from '../Component/store'
 import {Container,Row,Col,Label,Form,Input,Button} from 'reactstrap'
 import { Card } from 'reactstrap'
 import { useForm } from 'react-hook-form';
 import logo from '../Images/logo.png'
 import '../Styles/style.css'
+import axios from 'axios'
+import deliver from '../Images/delivery-boy-delivering.jpg'
+import thank from '../Images/thankyou.jpg'
 function Checkout() {
+  let items=[],count=[],total=0;
+  const [loaded,setloaded]=useState(false)
     const product = useStore(state => state.product)
     const { register, handleSubmit, errors } = useForm(); 
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+    product.map((item,key)=>{
+      items.push(item._id)
+      count.push(item.count)
+      total+=item.total
+    })
+  const onSubmit = async (data) => {
+   const res= await axios.post('http://13.233.120.227:8080/api/users/register',{ name:data.name,
+    email:data.email,
+    phoneNumber:data.mobile,
+    address:data.address })
+  const response = await axios.post('http://13.233.120.227:8080/api/orders',{
+    user:res.data._id,
+    orderItems:items,
+  orderItemsCount:count,
+  taxPrice:0,
+  shippingPrice:100,
+  totalPrice:total
+  })
+  console.log(response)
+  setloaded(true)
+};
+if(loaded)
+return(
+<div>
+  <Row style={{margin:'0px',paddingTop:'70px'}}>
+      <Col md={5} className="offset-md-4 offset-sm-4 offset-xs-4">
+      <img src={deliver} className="deliver"/>
+      </Col>
+      </Row> 
+  <Row style={{margin:'0px',paddingTop:'30px'}}>   
+      <Col md={5} className="offset-md-4 offset-sm-4 offset-xs-4">
+      <img src={thank} className="deliver" />
+      </Col>
+  </Row>
+</div>
+)
+else
     return (
         <div>
             <Container>

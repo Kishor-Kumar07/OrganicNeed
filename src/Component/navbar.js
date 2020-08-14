@@ -95,7 +95,7 @@ function Header(){
         
         <Navbar expand="lg" className='TopNavbar' light >
           <NavbarBrand>  <img className="logo" src={logo}/></NavbarBrand>
-          <NavbarToggler onClick={toggleNavbar} aria-controls="items" />
+          <NavbarToggler className="toggle" onClick={toggleNavbar} aria-controls="items" />
           <Collapse isOpen={collapsed} navbar id="items" >
             <Nav navbar pills className="items" >
               <NavItem>
