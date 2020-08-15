@@ -107,10 +107,16 @@ function Header(){
               <NavItem>
                 <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to="/contactUs/" activeClassName="active" exact path="/contactUs/" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>contact Us</NavLink>
               </NavItem >
-              <NavItem>
-                <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to="/blogs/" activeClassName="active" exact path="/blogs/" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>Blogs</NavLink>
-              </NavItem >
               
+              
+               <a href="https://organicproductswecare.blogspot.com/" style={{textDecoration:'none'}}> 
+               <NavItem style={{color:'gray',paddingTop:'7px'}} className='NavbarItem' activeClassName="active" activeClassName="active" exact path="/contactUs/" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>
+                Blogs
+                </NavItem >
+                 </a> 
+              
+              
+            
             </Nav>
           </Collapse>
          <NavbarBrand >

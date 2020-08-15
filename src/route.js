@@ -2,6 +2,7 @@ import Home from './Views/home.js'
 import Cart from './Views/cart.js'
 import Checkout from './Views/checkout.js'
 import Blogs from './Views/blogs.js'
+import About from './Views/about.js'
 import Category from './Component/category'
 
 const Routes = [
@@ -29,6 +30,11 @@ const Routes = [
       path: "/blogs",
       name: "blogs",
       component: Blogs
+    },
+    {
+      path: "/aboutus",
+      name: "About Us",
+      component: About
     }
   ];
   
