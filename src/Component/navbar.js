@@ -46,12 +46,20 @@ function Header(){
     <div style={{paddingTop:'30px',paddingLeft:'50px'}}>
     {product.map((prod,i)=>(
     <div>
-      <span><img height="50px" src={prod.image} style={{paddingRight:'20px'}}/>  
-      {prod.englishname}<span style={{paddingLeft:'30px'}}><i class="fa fa-trash" style={{ color: 'red'}} onClick={()=>{
+      <Row>
+        <Col md={2}>
+        <img height="50px" src={prod.image} style={{paddingRight:'20px'}}/>  
+        </Col>
+        <Col md={7} >
+      {prod.englishname}
+      </Col>
+      <Col md={3} >
+      <span style={{paddingLeft:'30px'}}><i class="fa fa-trash" style={{ color: 'red'}} onClick={()=>{
       prod.count=0
       prod.total=0
       updatetrash(prod.englishname)}}/></span>
-    </span>
+      </Col>
+    </Row>
     <h4 style={{paddingTop:'10px'}}><Button disabled={prod.count<2} style={{backgroundColor:'white',paddingRight:'10px',borderColor:'white'}} onClick={()=>{
       prod.count-=1
       prod.total=prod.count*prod.price
@@ -65,12 +73,12 @@ function Header(){
       plus(i,product)}} 
       >
       <i class="fa fa-plus " style={{color:'green'}} />
-         </Button><span style={{paddingLeft:'40px'}}>${prod.total}</span></h4>
+         </Button><span style={{paddingLeft:'40px'}}><i class="fa fa-inr" style={{paddingRight:'10px'}} />{prod.total}</span></h4>
     </div>
     ))}
     <div style={{paddingTop:'30px',paddingBottom:'40px'}}>
     
-    <h5><b>Subtotal</b><span style={{paddingLeft:'100px'}}>${total}</span></h5>
+    <h5><b>Subtotal</b><span style={{paddingLeft:'100px'}}><i class="fa fa-inr" style={{paddingRight:'10px'}} />{total}</span></h5>
     <span style={{paddingLeft:'70px'}}>
     <Link to="/checkout">
     <Button style={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}} onClick={() => onSetSidebarOpen(false)}>
@@ -109,7 +117,7 @@ function Header(){
               </NavItem >
               
               
-               <a href="https://organicproductswecare.blogspot.com/" style={{textDecoration:'none'}}> 
+               <a href="https://organicproductswecare.blogspot.com/" target="_blank" style={{textDecoration:'none'}}> 
                <NavItem style={{color:'gray',paddingTop:'7px'}} className='NavbarItem' activeClassName="active" activeClassName="active" exact path="/contactUs/" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>
                 Blogs
                 </NavItem >
