@@ -1,7 +1,7 @@
 import React, { Component,useState } from 'react';
 import Carousel,{consts} from "react-elastic-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Card,CardBody, CardText, CardImg,Button,Container ,Spinner,Tooltip} from 'reactstrap';
+import { Card,CardBody, CardText, CardImg,Button,Container ,Spinner,Tooltip,Modal,ModalBody,ModalFooter,ModalHeader} from 'reactstrap';
 import rice from '../Images/rice.jpg'
 import '../Styles/style.css'
 import {useStore} from './store.js'
@@ -27,29 +27,28 @@ const breakPoints = [
   const update = useStore(state => state.update)
   const product = useStore(state => state.product)
   const [loading, setLoading] = useState(false)
+  const togglemodal = () => setLoading(!loading);
   const TooltipItem = props => {
     const { item, id } = props;
     const [tooltipOpen, setTooltipOpen] = useState(false);
   
     const toggle = () => setTooltipOpen(!tooltipOpen);
-  
+    
     return (
       <span>
         <Button id={"Tooltip-" + id} style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}} onClick={()=>{
-         setLoading( true );
-          setTimeout(() => {
-            setLoading( false);
-          }, 2000);
-        item.count=item.count+1
+       togglemodal()
+       item.count=item.count+1
         item.total=item.count*item.price
       if(!product.includes(item))
       update(item)
      }}>
-              {loading && (
+              {/* {loading && (
             <i class="fa fa-spinner fa-pulse  fa-fw"></i>
-              )}
-               {!loading && <i  className="fa fa-shopping-bag" />}
+              )} */}
+               { <i  className="fa fa-shopping-bag" />}
                </Button>
+               
         {(!loading && <Tooltip
           placement='bottom'
           isOpen={tooltipOpen}
@@ -79,7 +78,15 @@ const breakPoints = [
 ))} 
 
 </Carousel>
-
+<Modal isOpen={loading} toggle={togglemodal} >
+        <ModalHeader toggle={togglemodal}>Modal title</ModalHeader>
+        <ModalBody>
+       Item Added to Cart
+       </ModalBody>
+        <ModalFooter>
+          <Button color="secondary" onClick={togglemodal}>OK</Button>
+        </ModalFooter>
+      </Modal>
 </Container>
 
 </div>
