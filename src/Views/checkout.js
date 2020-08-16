@@ -12,6 +12,7 @@ function Checkout() {
   let items=[],count=[],total=0;
   const [loaded,setloaded]=useState(false)
     const product = useStore(state => state.product)
+    const trash = useStore(state => state.trash)
     const { register, handleSubmit, errors } = useForm(); 
     product.map((item,key)=>{
       items.push(item._id)
@@ -32,6 +33,7 @@ function Checkout() {
   totalPrice:total
   })
   console.log(response)
+  trash()
   setloaded(true)
 };
 if(loaded)
