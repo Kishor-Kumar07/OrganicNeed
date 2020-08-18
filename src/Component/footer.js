@@ -28,7 +28,7 @@ function Footer(props) {
                 <Col md={3}>
                 <ul className="list-unstyled">
                     <li><h5 style={{color:"rgb(51, 163, 47)"}}>Services</h5></li>
-                        <li><Link style={{textDecoration:'none',color:'black'}} >About Us</Link></li>
+                        <li><Link to="/aboutUs/" style={{textDecoration:'none',color:'black'}} >About Us</Link></li>
                         <hr />
                         <li><a href="#" style={{textDecoration:'none',color:'black'}}>Faq's</a></li>
                         <hr />

@@ -4,21 +4,23 @@ import { NavLink as RRNavLink ,Link} from 'react-router-dom';
 import logo from '../Images/logo.png'
 import '../Styles/style.css'
 import {useStore} from './store'
-import ReactDrawer from 'react-drawer';
-import Sidebar from 'react-sidebar'
 import SideNav from 'react-simple-sidenav';
 import 'react-drawer/lib/react-drawer.css';
 import ScrollArea from 'react-scrollbar'
+import {slide as Menu} from 'react-burger-menu'
 function Header(){
   
 
   const [collapsed,setCollapsed] = useState(false)
   const [sidebarOpen, setOpen] = useState(false)
-
+  const [bar, setbarOpen] = useState(false)
   function toggleNavbar() {
        setCollapsed(
        !collapsed
     )
+  }
+  function onSetBar(prop){
+    setbarOpen(prop);
   }
   function closeNavbar(){
     if(collapsed===true){
@@ -102,10 +104,26 @@ function Header(){
         
         
         <Navbar expand="lg" className='TopNavbar' light >
+          <div className="bars" >
+            <Button onClick={()=>onSetBar(true)} style={{backgroundColor:'rgb(51, 163, 47)',color:'white'}}><i class="fa fa-bars" /></Button>
+            <SideNav showNav={bar} children={
+       <div>
+         
+       <i class="fa fa-times-circle" style={{fontSize:'30px',paddingLeft:'330px'}} onClick={()=>onSetBar(false)}/>
+       <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to='/' activeClassName="active" exact path="/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}> Home </NavLink>
+       <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to="/aboutUs/" activeClassName="active" exact path="/aboutUs/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>About Us</NavLink>
+       <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to="/contactUs/" activeClassName="active" exact path="/contactUs/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>contact Us</NavLink>
+       <a href="https://organicproductswecare.blogspot.com/" target="_blank" style={{textDecoration:'none'}}> 
+               <NavLink style={{color:'gray',paddingTop:'7px'}} className='NavbarItem' activeClassName="active" activeClassName="active" exact path="/contactUs/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>
+                Blogs
+                </NavLink >
+                 </a> 
+  </div>
+  } onHideNav={() => onSetBar(false)} />
+          </div>
           <NavbarBrand>  <img className="logo" src={logo}/></NavbarBrand>
-          <NavbarToggler className="toggle" onClick={toggleNavbar} aria-controls="items" />
-          <Collapse isOpen={collapsed} navbar id="items" >
-            <Nav navbar pills className="items" >
+           <div className="items">
+            <Nav navbar pills  >
               <NavItem>
                 <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to='/' activeClassName="active" exact path="/" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}> Home </NavLink>
               </NavItem>
@@ -126,49 +144,16 @@ function Header(){
               
             
             </Nav>
-          </Collapse>
-         <NavbarBrand >
-         <span style={{paddingRight:'20px'}}><i  className="fa fa-shopping-bag fa-2x" style={{color:'rgb(51, 163, 47)'}} onClick={()=>onSetSidebarOpen(true)}/>
+            </div>
+         
+         <span className="cart"><i  className="fa fa-shopping-bag fa-2x" style={{color:'rgb(51, 163, 47)'}} onClick={()=>onSetSidebarOpen(true)}/>
     <Badge style={{ position: "absolute" }} color="success">{product.length}</Badge></span>
-         </NavbarBrand>
+         
         </Navbar>
 
     <SideNav showNav={sidebarOpen} openFromRight="true" title="Organic Care Cart"   children={
       element
     } onHideNav={() => onSetSidebarOpen(false)} />
-    
-        {/* <Sidebar
-        sidebar={<b>Sidebar content dfgdb adfgfsg gfbrssrb srrbgbhnysbgfffy fbynyngbgf</b>}
-        open={sidebarOpen}
-        onSetOpen={onSetSidebarOpen}
-        styles={{  sidebar: {
-          zIndex: 2,
-          position: "absolute",
-          top: 0,
-          bottom: 0,
-          background: "white",
-          transition: "transform .3s ease-out",
-          WebkitTransition: "-webkit-transform .3s ease-out",
-          willChange: "transform",
-          overflowY: "auto"
-        } }}
-      > */}
-        
-    {/* </Sidebar> */}
-    {/* <ReactDrawer
-          open={open}
-          position='right'
-          onClose={onDrawerClose}
-          noOverlay='false'
-          style={{background:'white'}}
-          >
-          <i onClick={onDrawerClose} className="fa fa-instagram"></i>
-          <h2>What a nice drawer !</h2>
-        </ReactDrawer> */}
-
-    {console.log(product)}
-        
-
       </div>
     );
   }

@@ -34,6 +34,7 @@
   padding-bottom: 25px;
 }
 
+
 @media(min-width:320px){
   .logo{
     width : 140px;
@@ -45,6 +46,12 @@
   }
   .cardalign{
     top:90%
+  }
+  .items{
+    display: none;
+  }
+  .bars{
+    display:block;
   }
 }
 @media(min-width:360px){
@@ -109,6 +116,7 @@
   .deliver{
     width : 200px;
   }
+  
 }
 @media(min-width:775px){
   .logo{
@@ -126,13 +134,20 @@
   .deliver{
     width : 250px;
   }
+  
 }
-@media(min-width:1024px){
+@media(min-width:994px){
   .logo{
     width : 300px;
   }
   .deliver{
     width : 300px;
+  }
+  .items{
+    display:block;
+  }
+  .bars{
+    display:none;
   }
 }
 @media(min-width:1100px){
