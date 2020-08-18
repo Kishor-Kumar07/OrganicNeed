@@ -10,7 +10,7 @@ function Footer(props) {
                 <Col className=" offset-md-1 " md={3}>
                     
                     <ul className="list-unstyled">
-                    <li><h5 style={{color:"rgb(51, 163, 47)"}}>Top Categories</h5></li>
+                    <li><h5 style={{color:"rgb(51, 163, 47)",paddingBottom:'10px'}}>Top Categories</h5></li>
                         <li><Link style={{textDecoration:'none',color:'black'}} to="/category/rice">Rice</Link></li>
                         <hr />
                         <li><Link style={{textDecoration:'none',color:'black'}} to="/category/oil">Oil</Link></li>
@@ -27,7 +27,7 @@ function Footer(props) {
                 </Col>
                 <Col md={3}>
                 <ul className="list-unstyled">
-                    <li><h5 style={{color:"rgb(51, 163, 47)"}}>Services</h5></li>
+                    <li><h5 style={{color:"rgb(51, 163, 47)",paddingBottom:'10px'}}>Services</h5></li>
                         <li><Link to="/aboutUs/" style={{textDecoration:'none',color:'black'}} >About Us</Link></li>
                         <hr />
                         <li><a href="#" style={{textDecoration:'none',color:'black'}}>Faq's</a></li>
@@ -38,7 +38,7 @@ function Footer(props) {
                 </Col>
                 <Col md={3} >
                 <ul className="list-unstyled">
-                <li><h5 style={{color:"rgb(51, 163, 47)"}}>Privacy {"&"} Terms</h5></li>
+                <li><h5 style={{color:"rgb(51, 163, 47)",paddingBottom:'10px'}}>Privacy {"&"} Terms</h5></li>
                         <li><a href="#" style={{textDecoration:'none',color:'black'}}>Payment Policy</a></li>
                         <hr />
                         <li><a href="#" style={{textDecoration:'none',color:'black'}}>Privacy Policy</a></li>
