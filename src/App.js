@@ -2,7 +2,6 @@ import React, { Component} from "react";
 import { Route, Switch } from "react-router-dom";
 import Navbar from './Component/navbar.js'
 import routes from "./route.js";
-import Footer from './Component/footer.js'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUserGraduate, faHeart, faUsers, faHandPointRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -46,8 +45,6 @@ class Admin extends Component {
           <Switch>{this.getRoutes(routes)}
           <Route component={this.PageNotFound} />
           </Switch>
-          <br />
-          <Footer />
         </div>
       </div>
     );

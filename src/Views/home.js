@@ -5,6 +5,7 @@ import Header from '../Component/header.js'
 import Products from '../Component/products.js'
 import Category from '../Component/carousel.js'
 import deliver from '../Images/delivery.jpg'
+import Footer from '../Component/footer.js'
 class Home extends Component {
     constructor(props)
     {
@@ -97,7 +98,7 @@ class Home extends Component {
     </Row>
     </Container>
                   
-            
+    <Footer />
             
             </div>
         )
