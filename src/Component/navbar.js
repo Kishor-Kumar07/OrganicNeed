@@ -103,13 +103,13 @@ function Header(){
       <div>
         
         
-        <Navbar expand="lg" className='TopNavbar' light >
+        <Navbar expand="lg" className='TopNavbar' light style={{justifyContent:'space-between'}} >
           <div className="bars" >
             <Button onClick={()=>onSetBar(true)} style={{backgroundColor:'rgb(51, 163, 47)',color:'white'}}><i class="fa fa-bars" /></Button>
             <SideNav showNav={bar} children={
        <div>
          
-       <i class="fa fa-times-circle" style={{fontSize:'30px',paddingLeft:'330px'}} onClick={()=>onSetBar(false)}/>
+       <i class="fa fa-times-circle" style={{fontSize:'30px',paddingLeft:'10px'}} onClick={()=>onSetBar(false)}/>
        <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to='/' activeClassName="active" exact path="/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}> Home </NavLink>
        <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to="/aboutUs/" activeClassName="active" exact path="/aboutUs/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>About Us</NavLink>
        <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to="/contactUs/" activeClassName="active" exact path="/contactUs/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>contact Us</NavLink>
