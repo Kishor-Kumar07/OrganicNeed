@@ -1,5 +1,5 @@
-import React, { Component, useEffect ,useState} from 'react';
-import { Card, CardText, CardImg,Container,Row,Col, Button, CardDeck } from 'reactstrap';
+import React from 'react';
+import { Card, CardText, CardImg,Container,Row,Col, Button } from 'reactstrap';
 import rice from '../Images/rice.jpg'
 import oil from '../Images/oilposter.jpg'
 import nuts from '../Images/nuts.jpg'
@@ -8,10 +8,8 @@ import spice from '../Images/spice.jpg'
 import pulses from '../Images/pulses.jpg'
 import {Link} from 'react-router-dom'
 import {useStore} from './store.js'
-import axios from 'axios'
 
 function Carousel(props){
-console.log(props.state)
 const updateprod = useStore(state => state.updateprod)
 updateprod(props.state.oil,'oil')
 updateprod(props.state.spice,'spice')

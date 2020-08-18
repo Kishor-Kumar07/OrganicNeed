@@ -1,7 +1,6 @@
 import React,{useState} from 'react'
 import {useStore} from '../Component/store'
-import {Container,Row,Col,Label,Form,Input,Button} from 'reactstrap'
-import { Card } from 'reactstrap'
+import {Container,Row,Col,Label} from 'reactstrap'
 import { useForm } from 'react-hook-form';
 import logo from '../Images/logo.png'
 import '../Styles/style.css'

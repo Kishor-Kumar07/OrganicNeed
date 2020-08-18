@@ -1,8 +1,7 @@
-import React, { Component,useState } from 'react';
+import React, { useState } from 'react';
 import Carousel,{consts} from "react-elastic-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Card,CardBody, CardText, CardImg,Button,Container ,Spinner,Tooltip,Modal,ModalBody,ModalFooter,ModalHeader} from 'reactstrap';
-import rice from '../Images/rice.jpg'
+import { Card,CardBody, CardText, CardImg,Button,Container ,Tooltip,Modal,ModalBody,ModalFooter,ModalHeader} from 'reactstrap';
 import '../Styles/style.css'
 import {useStore} from './store.js'
 const breakPoints = [

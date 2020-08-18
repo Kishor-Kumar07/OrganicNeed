@@ -1,5 +1,5 @@
-import React, { Component ,useState} from "react";
-import { Collapse,  Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink,Row,Col, Button,Badge } from 'reactstrap';
+import React, { useState} from "react";
+import {  Navbar, NavbarBrand, Nav, NavItem, NavLink,Row,Col, Button,Badge } from 'reactstrap';
 import { NavLink as RRNavLink ,Link} from 'react-router-dom';
 import logo from '../Images/logo.png'
 import '../Styles/style.css'
@@ -7,7 +7,6 @@ import {useStore} from './store'
 import SideNav from 'react-simple-sidenav';
 import 'react-drawer/lib/react-drawer.css';
 import ScrollArea from 'react-scrollbar'
-import {slide as Menu} from 'react-burger-menu'
 function Header(){
   
 
@@ -35,7 +34,6 @@ function Header(){
     const plus = useStore(state => state.plus)
     const minus = useStore(state => state.minus)
     const updatetrash = useStore(state => state.updatetrash)
-    var array = product; 
     var total=0;
     product.map((prod,i)=>(
       total+=prod.total

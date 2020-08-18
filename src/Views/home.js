@@ -6,8 +6,6 @@ import Products from '../Component/products.js'
 import Category from '../Component/carousel.js'
 import Footer from '../Component/footer.js'
 import deliver from '../Images/delivery.jpg'
-import Typist from 'react-typist'
-import {Lines} from 'react-preloaders'
 class Home extends Component {
     constructor(props)
     {

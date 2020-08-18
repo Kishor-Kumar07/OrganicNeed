@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import {Button} from 'reactstrap'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import Fade from 'react-reveal/Fade'
-import slider1 from '../Images/slider1.jpg'
 import slider2 from '../Images/slider2.jpg'
 import slider3 from '../Images/slider3.jpg'
 import slider4 from '../Images/slider4.jpg'

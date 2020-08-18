@@ -1,6 +1,5 @@
-import React,{useEffect,useState} from 'react'
-import axios from 'axios'
-import {Card,CardImg,CardText,Container,Row,Col,Button,Tooltip, Spinner} from 'reactstrap'
+import React,{useState} from 'react'
+import {Card,CardImg,CardText,Container,Row,Col,Button,Tooltip} from 'reactstrap'
 import {useStore} from './store.js'
  function Category(props) {
     const { product } = props.match.params
