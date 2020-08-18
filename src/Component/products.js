@@ -42,9 +42,6 @@ const breakPoints = [
       if(!product.includes(item))
       update(item)
      }}>
-              {/* {loading && (
-            <i class="fa fa-spinner fa-pulse  fa-fw"></i>
-              )} */}
                { <i  className="fa fa-shopping-bag" />}
                </Button>
                
@@ -79,7 +76,7 @@ const breakPoints = [
 
 </Carousel>
 <Modal isOpen={loading} toggle={togglemodal} >
-        <ModalHeader toggle={togglemodal}>Modal title</ModalHeader>
+        <ModalHeader toggle={togglemodal}>Item</ModalHeader>
         <ModalBody>
        Item Added to Cart
        </ModalBody>

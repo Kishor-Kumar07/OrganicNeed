@@ -43,17 +43,17 @@ function Header(){
     {product.length>0?
     (
     <ScrollArea>
-    <div style={{paddingTop:'30px',paddingLeft:'50px'}}>
+    <div style={{paddingTop:'30px',paddingLeft:'30px'}}>
     {product.map((prod,i)=>(
     <div>
       <Row>
-        <Col md={2}>
+        <Col md={2} sm={2} xs={2}>
         <img height="50px" src={prod.image} style={{paddingRight:'20px'}}/>  
         </Col>
-        <Col md={7} >
+        <Col md={7} sm={7} xs={6}>
       {prod.englishname}
       </Col>
-      <Col md={3} >
+      <Col md={3} sm={3} xs={4}>
       <span style={{paddingLeft:'30px'}}><i class="fa fa-trash" style={{ color: 'red'}} onClick={()=>{
       prod.count=0
       prod.total=0
@@ -108,11 +108,11 @@ function Header(){
        <div>
          
        <i class="fa fa-times-circle" style={{fontSize:'30px',paddingLeft:'10px'}} onClick={()=>onSetBar(false)}/>
-       <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to='/' activeClassName="active" exact path="/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}> Home </NavLink>
-       <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to="/aboutUs/" activeClassName="active" exact path="/aboutUs/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>About Us</NavLink>
-       <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to="/contactUs/" activeClassName="active" exact path="/contactUs/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>contact Us</NavLink>
+       <NavLink tag={RRNavLink} onClick={()=>onSetBar(false)} className='NavbarItem' to='/' activeClassName="active" exact path="/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}> Home </NavLink>
+       <NavLink tag={RRNavLink} onClick={()=>onSetBar(false)} className='NavbarItem' to="/aboutUs/" activeClassName="active" exact path="/aboutUs/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>About Us</NavLink>
+       <NavLink tag={RRNavLink} onClick={()=>onSetBar(false)} className='NavbarItem' to="/contactUs/" activeClassName="active" exact path="/contactUs/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>contact Us</NavLink>
        <a href="https://organicproductswecare.blogspot.com/" target="_blank" style={{textDecoration:'none'}}> 
-               <NavLink style={{color:'gray',paddingTop:'7px'}} className='NavbarItem' activeClassName="active" activeClassName="active" exact path="/contactUs/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>
+               <NavLink onClick={()=>onSetBar(false)} style={{color:'gray',paddingTop:'7px'}} className='NavbarItem' activeClassName="active" activeClassName="active" exact path="/contactUs/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>
                 Blogs
                 </NavLink >
                  </a> 

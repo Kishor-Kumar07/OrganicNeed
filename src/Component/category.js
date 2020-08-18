@@ -1,12 +1,16 @@
 import React,{useState} from 'react'
-import {Card,CardImg,CardText,Container,Row,Col,Button,Tooltip} from 'reactstrap'
+import {Card,CardImg,CardText,Container,Row,Col,Button,Tooltip,Modal,ModalBody,ModalFooter,ModalHeader} from 'reactstrap'
 import {useStore} from './store.js'
  function Category(props) {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
     const { product } = props.match.params
     const prod = useStore(state => state[product])
     const update = useStore(state => state.update)
     const products = useStore(state => state.product)
     const [loading, setLoading] = useState(false)
+    const togglemodal = () => setLoading(!loading);
   const TooltipItem = props => {
     const { item, id } = props;
     const [tooltipOpen, setTooltipOpen] = useState(false);
@@ -16,19 +20,14 @@ import {useStore} from './store.js'
     return (
       <span>
         <Button id={"Tooltip-" + id} style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}} onClick={()=>{
-         setLoading( true );
-          setTimeout(() => {
-            setLoading( false);
-          }, 1000);
+        togglemodal()
         item.count=item.count+1
         item.total=item.count*item.price
       if(!products.includes(item))
       update(item)
      }}>
-              {loading && (
-            <i class="fa fa-spinner fa-pulse fa-fw"></i>
-              )}
-               {!loading && <i  className="fa fa-shopping-bag" />}
+             
+               {<i  className="fa fa-shopping-bag" />}
                </Button>
         {(!loading && <Tooltip
           placement='bottom'
@@ -63,6 +62,15 @@ import {useStore} from './store.js'
       ))
     }
         </Row>
+        <Modal isOpen={loading} toggle={togglemodal} >
+        <ModalHeader toggle={togglemodal}>Item</ModalHeader>
+        <ModalBody>
+       Item Added to Cart
+       </ModalBody>
+        <ModalFooter>
+          <Button color="secondary" onClick={togglemodal}>OK</Button>
+        </ModalFooter>
+      </Modal>
         </Container>
     )
 }

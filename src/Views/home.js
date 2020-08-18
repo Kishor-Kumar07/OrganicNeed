@@ -4,7 +4,6 @@ import '../Styles/style.css'
 import Header from '../Component/header.js'
 import Products from '../Component/products.js'
 import Category from '../Component/carousel.js'
-import Footer from '../Component/footer.js'
 import deliver from '../Images/delivery.jpg'
 class Home extends Component {
     constructor(props)
@@ -98,7 +97,7 @@ class Home extends Component {
     </Row>
     </Container>
                   
-            <Footer />
+            
             
             </div>
         )
