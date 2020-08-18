@@ -31,7 +31,6 @@ function Checkout() {
   shippingPrice:100,
   totalPrice:total
   })
-  console.log(response)
   trash()
   setloaded(true)
 };

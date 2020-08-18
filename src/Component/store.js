@@ -25,7 +25,7 @@ set(state =>
       set(state=> ({product:state.product.filter(item => item.englishname !== name)}))
     },
     trash:() =>{
-      set(state=> ({product:state.product.filter(item => item)}))
+      set(state=> ({product:[]}))
     },
     updateprod: (output,name) => set(state => ({[name]:output}))
   }))
