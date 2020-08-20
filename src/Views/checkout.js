@@ -58,8 +58,8 @@ else
             position: 'absolute', left: '50%', 
             transform: 'translate(-50%, -50%)',paddingBottom:'20px',
             color: 'white'}}>
-                
-      <Row style={{paddingTop:'20px'}}>
+      
+       <Row style={{paddingTop:'20px'}}>
      <Col className="offset-md-2">
      <img className="logo" src={logo}/>
      </Col>
@@ -99,14 +99,32 @@ else
        <input className="form-control" name="address" type='text'  id='address' placeholder='Your Location' ref={register({required:'address is required'})}/>
        {errors.address && <p style={{color:'red'}}>{errors.address.message}</p>}
        </Col>
+       </Row>
+       <Row>
+      <Col md={4} >
+       <Label className="form-control" id='type' style={{borderColor:'white'}}>Payment Type</Label>
+       </Col>
+        <Col md={7} >
+        <select name="type" id="type" defaultValue="Cash On Delivery" ref={register({required:'Type is required'})}>
+  <option value="Cash On Delivery">Cash On Delivery</option>
+  <option value="Paytm">Paytm</option>
+  <option value="Gpay">Gpay</option>
+  <option value="BHIM UPI">BHIM UPI</option>
+</select>
+       </Col>
        <Col md={3} className="offset-md-5" style={{paddingTop:'20px'}}>
        <input type="submit" style={{backgroundColor:'green',color:'white'}}/>
        </Col>
        </Row>
+       <h6 style={{color:'black',left:'10%',right:'10%',paddingTop:'20px'}} >
+       We'll contact you before our next business day and we will let you know the time of delivery.  We will be calling you from +91 94442 22921.
+       </h6>
        </div>
+       
        </form>
        
        </Container>
+       
         </div>
     )
 }
