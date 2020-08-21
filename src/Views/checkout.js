@@ -116,9 +116,9 @@ else
        <input type="submit" style={{backgroundColor:'green',color:'white'}}/>
        </Col>
        </Row>
-       <h6 style={{color:'black',left:'10%',right:'10%',paddingTop:'20px'}} >
+       <h5 style={{color:'black',left:'10%',right:'10%',paddingTop:'20px'}} >
        We'll contact you before our next business day and we will let you know the time of delivery.  We will be calling you from +91 94442 22921.
-       </h6>
+       </h5>
        </div>
        
        </form>

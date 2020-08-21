@@ -1,5 +1,5 @@
 import Home from './Views/home.js'
-import Cart from './Views/cart.js'
+import Contact from './Views/contact.js'
 import Checkout from './Views/checkout.js'
 import Blogs from './Views/blogs.js'
 import About from './Views/about.js'
@@ -17,9 +17,9 @@ const Routes = [
       component: Category
     },
     {
-      path: "/cart",
-      name: "cart",
-      component: Cart
+      path: "/contactus",
+      name: "contact us",
+      component: Contact
     },
     {
       path: "/checkout",

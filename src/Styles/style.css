@@ -125,7 +125,9 @@
   .deliver{
     width : 230px;
   }
-  
+  .contact{
+    padding-top:30px
+  }
 }
 @media(min-width:900px){
   .logo{
