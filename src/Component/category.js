@@ -42,7 +42,7 @@ import {useStore} from './store.js'
   };
     return (
         
-          <Container>
+          <Container style={{paddingTop:'40px'}}>
   <Row >
       {prod.map((x,id)=>(
  <Col md={4} style={{paddingBottom:'60px'}}>

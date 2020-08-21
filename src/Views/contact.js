@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import contact from '../Images/contact.jpg'
  function Contact() {
     return (
-        <Container >
+        <Container style={{paddingTop:'40px'}}>
             <Row >
                 <Col className="offset-md-3" md={6} style={{paddingRight:'15px'}}>
                 <Carousel showStatus={false} showThumbs={false} showIndicators={false} >
