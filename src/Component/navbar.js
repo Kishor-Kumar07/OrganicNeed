@@ -48,10 +48,10 @@ function Header(){
     <div>
       <Row>
         <Col md={2} sm={2} xs={2}>
-        <img height="50px" src={prod.image} style={{paddingRight:'20px'}}/>  
+        <img height="50px" src={prod.image} style={{paddingRight:'10px'}}/>  
         </Col>
         <Col md={7} sm={7} xs={6}>
-      {prod.englishname}
+      {prod.englishname}({prod.quantity})
       </Col>
       <Col md={3} sm={3} xs={4}>
       <span style={{paddingLeft:'30px'}}><i class="fa fa-trash" style={{ color: 'red'}} onClick={()=>{
