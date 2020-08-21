@@ -79,13 +79,13 @@ function Header(){
     <div style={{paddingTop:'30px',paddingBottom:'40px'}}>
     
     <h5><b>Subtotal</b><span style={{paddingLeft:'100px'}}><i class="fa fa-inr" style={{paddingRight:'10px'}} />{total}</span></h5>
-    <span style={{paddingLeft:'70px'}}>
     <Link to="/checkout">
+      <div style={{paddingTop:'20px',paddingLeft:'70px'}}>
     <Button style={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}} onClick={() => onSetSidebarOpen(false)}>
       Checkout
-    </Button> 
+    </Button>
+    </div> 
     </Link> 
-    </span>
     </div>
      </div>
      </ScrollArea>)
