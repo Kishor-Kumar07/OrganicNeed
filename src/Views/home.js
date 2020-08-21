@@ -61,24 +61,26 @@ class Home extends Component {
            <CardText className="text">
                <i className="fa fa-instagram fa-2x" style={{color:'rgb(51, 163, 47)'}} /><br />
                <h4><span style={{color:'rgb(51, 163, 47)'}}>@Organic</span>Care</h4>
-               <h5>Follow us on instagram</h5><br />
+               <h5>Follow us on Instagram</h5><br />
+               <a href="https://www.instagram.com/organiccarechennai/?hl=en" target="_blank">
                <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
             Follow Us
             </Button>  
-
+           </a>
            </CardText>
        </Card>
     </Col>
     <Col md={4} style={{paddingBottom:'40px'}}>
        <Card style={{backgroundColor:'#d3d3d3'}}>
            <CardText className="text">
-               <i className="fa fa-whatsapp fa-2x" style={{color:'rgb(51, 163, 47)'}} /><br />
+               <i className="fa fa-facebook fa-2x" style={{color:'rgb(51, 163, 47)'}} /><br />
                <h4><span style={{color:'rgb(51, 163, 47)'}}>@Organic</span>Care</h4>
-               <h5>Follow us on whatsapp</h5><br />
+               <h5>Follow us on FaceBook</h5><br />
+               <a href="https://www.facebook.com/Organiccare-108536217636361/" target="_blank">
                <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
             Follow Us
             </Button>  
-
+            </a>
            </CardText>
        </Card>
     </Col>

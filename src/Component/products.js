@@ -67,7 +67,7 @@ const breakPoints = [
            <CardText className="text">
             <span><i class="fa fa-inr" style={{paddingRight:'10px'}} />{x.price}</span>
             <br />
-            <h6>{x.quantity}</h6>
+            <h6>({x.quantity})</h6>
             <br />
             <TooltipItem key={id} item={x} id={id} />
            </CardText>

@@ -32,7 +32,7 @@ function Footer(props) {
                         <hr />
                         <li><a href="#" style={{textDecoration:'none',color:'black'}}>Faq's</a></li>
                         <hr />
-                        <li><a href="#" style={{textDecoration:'none',color:'black'}}>Contact Us</a></li>
+                        <li><Link to="/contactUs/" style={{textDecoration:'none',color:'black'}} >Contact Us</Link></li>
                         
                     </ul>
                 </Col>
@@ -55,28 +55,23 @@ function Footer(props) {
                 <Row style={{margin:'0px'}}>     
                       
                 <Col md={5}>
-                    <p style={{color:'white'}}>© Copyright 2018 Ristorante Con Fusion</p>
+                    <p style={{color:'white'}}>© All Rights Reserved</p>
                     
                 </Col>
                <Col className="offset-md-1" md={4} style={{paddingBottom:'10px'}}>
-                   <a href="https://web.whatsapp.com" target="_blank">
-                   <Button style={{color:"rgb(51, 163, 47)",backgroundColor:'white'}}>
-               <i className="fa fa-whatsapp" aria-hidden="true"/>
+               <a href="https://www.instagram.com/organiccarechennai/?hl=en" target="_blank">
+               <Button style={{color:"rgb(51, 163, 47)",backgroundColor:'white'}}>
+               <i className="fa fa-instagram" aria-hidden="true"/>
                </Button>
-               </a>
-               <a href="https://facebook.com" target="_blank">
+               </a> 
+               <a href="https://www.facebook.com/Organiccare-108536217636361/" target="_blank">
                <Button style={{color:"rgb(51, 163, 47)",backgroundColor:'white'}}>
                <i className="fa fa-facebook" aria-hidden="true"/>
                </Button>
                </a>
-               <a href="https://instagram.com" target="_blank">
-               <Button style={{color:"rgb(51, 163, 47)",backgroundColor:'white'}}>
-               <i className="fa fa-instagram" aria-hidden="true"/>
-               </Button>
-               </a>
-               <a href="https://gmail.com" target="_blank">
-               <Button style={{color:"rgb(51, 163, 47)",backgroundColor:'white'}}>
-               <i className="fa fa-envelope" aria-hidden="true"/>
+               <a href="https://web.whatsapp.com" target="_blank">
+                   <Button style={{color:"rgb(51, 163, 47)",backgroundColor:'white'}}>
+               <i className="fa fa-linkedin" aria-hidden="true"/>
                </Button>
                </a>
                </Col>
