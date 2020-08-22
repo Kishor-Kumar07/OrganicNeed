@@ -116,6 +116,7 @@ function Header(){
                 Blogs
                 </NavLink >
                  </a> 
+                
   </div>
   } onHideNav={() => onSetBar(false)} />
           </div>
@@ -138,7 +139,19 @@ function Header(){
                 Blogs
                 </NavItem >
                  </a> 
-              
+                 <div class="dropdown">
+              <Button class="dropbtn" style={{backgroundColor:'white',color:'grey',border:'none'}}>Categories
+      <i class="fa fa-caret-down"></i>
+              </Button>
+              <div class="dropdown-content">
+              <Link to='/category/rice'>Rice</Link>
+              <Link to='/category/spice'>Spices</Link>
+              <Link to='/category/oil'>Oil</Link>
+              <Link to='/category/nut'>Nuts</Link>
+              <Link to='/category/pulse'>Pulses</Link>
+              <Link to='/category/beauty'>Beauty Products</Link>
+    </div>
+          </div>    
               
             
             </Nav>

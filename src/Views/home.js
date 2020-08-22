@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import {  Row, Col, CardText,Container,Card,Button } from 'reactstrap';
+import {  Row, Col, CardText,Container,Card,Button, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import '../Styles/style.css'
 import Header from '../Component/header.js'
 import Products from '../Component/products.js'
 import Category from '../Component/carousel.js'
 import deliver from '../Images/delivery.jpg'
 import Footer from '../Component/footer.js'
+import {Link} from 'react-router-dom'
 class Home extends Component {
     constructor(props)
     {
@@ -35,7 +36,18 @@ class Home extends Component {
     render() {
         return (
             <div>
-           
+           {/* <Row style={{margin:'0px'}}>
+                  <Col md={5} className="offset-md-5">
+                   <Breadcrumb style={{backgroundColor:'white'}}>
+                   <BreadcrumbItem><Link to='/category/rice'>Rices</Link></BreadcrumbItem>
+                   <BreadcrumbItem><Link to='/category/spice'>Spices</Link></BreadcrumbItem>
+                   <BreadcrumbItem><Link to='/category/nut'>Nuts</Link></BreadcrumbItem>
+                   <BreadcrumbItem><Link to='/category/oil'>Oils</Link></BreadcrumbItem>
+                   <BreadcrumbItem><Link to='/category/pulse'>Pulses</Link></BreadcrumbItem>
+                   <BreadcrumbItem><Link to='/category/beauty'>Beauty Products</Link></BreadcrumbItem>
+                   </Breadcrumb>
+                   </Col>
+           </Row> */}
                 <br /><br />
                 <Row style={{margin:'0px'}}>
                     <Col md={4} style={{paddingLeft:'20px',alignSelf:'center',alignItems:'center',paddingBottom:'20px'}}>
