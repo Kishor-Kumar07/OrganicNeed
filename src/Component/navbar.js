@@ -109,8 +109,8 @@ function Header(){
          
        <i class="fa fa-times-circle" style={{fontSize:'30px',paddingLeft:'10px'}} onClick={()=>onSetBar(false)}/>
        <NavLink tag={RRNavLink} onClick={()=>onSetBar(false)} className='NavbarItem' to='/' activeClassName="active" exact path="/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}> Home </NavLink>
-       <NavLink tag={RRNavLink} onClick={()=>onSetBar(false)} className='NavbarItem' to="/aboutUs/" activeClassName="active" exact path="/aboutUs/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>About Us</NavLink>
-       <NavLink tag={RRNavLink} onClick={()=>onSetBar(false)} className='NavbarItem' to="/contactUs/" activeClassName="active" exact path="/contactUs/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>contact Us</NavLink>
+       <NavLink tag={RRNavLink} onClick={()=>onSetBar(false)} className='NavbarItem' to="/aboutUs/" activeClassName="active" exact path="/aboutUs/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>AboutUs</NavLink>
+       <NavLink tag={RRNavLink} onClick={()=>onSetBar(false)} className='NavbarItem' to="/contactUs/" activeClassName="active" exact path="/contactUs/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>ContactUs</NavLink>
        <a href="https://organicproductswecare.blogspot.com/" target="_blank" style={{textDecoration:'none'}}> 
                <NavLink onClick={()=>onSetBar(false)} style={{color:'gray',paddingTop:'7px'}} className='NavbarItem' activeClassName="active" activeClassName="active" exact path="/contactUs/" style={{color:'black'}} activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>
                 Blogs
@@ -119,17 +119,17 @@ function Header(){
   </div>
   } onHideNav={() => onSetBar(false)} />
           </div>
-          <NavbarBrand>  <img className="logo" src={logo}/></NavbarBrand>
+          <NavbarBrand href="/#">  <img className="logo" src={logo}/></NavbarBrand>
            <div className="items">
             <Nav navbar pills  >
               <NavItem>
                 <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to='/' activeClassName="active" exact path="/" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}> Home </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to="/aboutUs/" activeClassName="active" exact path="/aboutUs/" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>About Us</NavLink>
+                <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to="/aboutUs/" activeClassName="active" exact path="/aboutUs/" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>AboutUs</NavLink>
               </NavItem >
               <NavItem>
-                <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to="/contactUs/" activeClassName="active" exact path="/contactUs/" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>contact Us</NavLink>
+                <NavLink tag={RRNavLink} onClick={closeNavbar} className='NavbarItem' to="/contactUs/" activeClassName="active" exact path="/contactUs/" activeStyle={{backgroundColor: 'rgb(51, 163, 47)', color: 'white'}}>ContactUs</NavLink>
               </NavItem >
               
               

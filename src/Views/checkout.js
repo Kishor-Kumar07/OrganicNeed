@@ -37,6 +37,9 @@ function Checkout() {
 if(loaded)
 return(
 <div>
+<h4 style={{color:'black',paddingLeft:'20%',paddingRight:'20%',paddingTop:'20px',justifyContent:'center'}} >
+       We'll contact you before our next business day and we will let you know the time of delivery.  We will be calling you from +91 94442 22921.
+</h4>
   <Row style={{margin:'0px',paddingTop:'70px'}}>
       <Col md={5} className="offset-md-4 offset-sm-4 offset-xs-4">
       <img src={deliver} className="deliver"/>
@@ -116,9 +119,6 @@ else
        <input type="submit" style={{backgroundColor:'green',color:'white'}}/>
        </Col>
        </Row>
-       <h5 style={{color:'black',left:'10%',right:'10%',paddingTop:'20px'}} >
-       We'll contact you before our next business day and we will let you know the time of delivery.  We will be calling you from +91 94442 22921.
-       </h5>
        </div>
        
        </form>

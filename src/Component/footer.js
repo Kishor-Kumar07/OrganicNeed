@@ -7,7 +7,7 @@ function Footer(props) {
     
         <div>
             <Row style={{margin:'0px'}}>            
-                <Col className=" offset-md-1 " md={3}>
+                <Col className=" offset-md-3 " md={3}>
                     
                     <ul className="list-unstyled">
                     <li><h5 style={{color:"rgb(51, 163, 47)",paddingBottom:'10px'}}>Top Categories</h5></li>
@@ -30,26 +30,11 @@ function Footer(props) {
                     <li><h5 style={{color:"rgb(51, 163, 47)",paddingBottom:'10px'}}>Services</h5></li>
                         <li><Link to="/aboutUs/" style={{textDecoration:'none',color:'black'}} >About Us</Link></li>
                         <hr />
-                        <li><a href="#" style={{textDecoration:'none',color:'black'}}>Faq's</a></li>
-                        <hr />
                         <li><Link to="/contactUs/" style={{textDecoration:'none',color:'black'}} >Contact Us</Link></li>
                         
                     </ul>
                 </Col>
-                <Col md={3} >
-                <ul className="list-unstyled">
-                <li><h5 style={{color:"rgb(51, 163, 47)",paddingBottom:'10px'}}>Privacy {"&"} Terms</h5></li>
-                        <li><a href="#" style={{textDecoration:'none',color:'black'}}>Payment Policy</a></li>
-                        <hr />
-                        <li><a href="#" style={{textDecoration:'none',color:'black'}}>Privacy Policy</a></li>
-                        <hr />
-                        <li><a href="#" style={{textDecoration:'none',color:'black'}}>Return Policy</a></li>
-                        <hr />
-                        <li><a href="#" style={{textDecoration:'none',color:'black'}}>Shipping Policy</a></li>
-                        <hr />
-                        <li><a href="#" style={{textDecoration:'none',color:'black'}}>Terms {"&"} Conditions</a></li>
-                        </ul>
-                </Col>
+                
                 </Row>
                 <div className="footer">
                 <Row style={{margin:'0px'}}>     

@@ -53,8 +53,11 @@
   .bars{
     display:block;
   }
+  .call{
+    font-size: 15px;
+  }
 }
-@media(min-width:360px){
+@media(min-width:361px){
   .logo{ 
     width : 160px;
   }
@@ -63,6 +66,9 @@
   }
   .cardalign{
     top:80%
+  }
+  .call{
+    font-size: 20px;
   }
 }
 
@@ -116,7 +122,9 @@
   .deliver{
     width : 200px;
   }
-  
+  .call{
+    font-size: 19px;
+  }
 }
 @media(min-width:775px){
   .logo{
@@ -127,6 +135,9 @@
   }
   .contact{
     padding-top:30px
+  }
+  .call{
+    font-size: 25px;
   }
 }
 @media(min-width:900px){
