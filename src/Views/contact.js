@@ -30,7 +30,7 @@ import { Map, Marker, GoogleApiWrapper } from 'google-maps-react'
                 Ramanathan St, Mahalingapuram, Nungambakkam, Chennai, Tamil Nadu 600034
                 </span>
                 <Col style={{paddingRight:'0px'}}>
-                <span className="call">https://goo.gl/maps/rgQPkL3WPdxK1nGz5</span>
+                <span className="call" >https://goo.gl/maps/rgQPkL3WPdxK1nGz5 </span>
                 </Col> 
                 </Col>
                 
