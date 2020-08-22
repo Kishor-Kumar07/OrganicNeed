@@ -17,7 +17,7 @@ import { Map, Marker, GoogleApiWrapper } from 'google-maps-react'
             </Row>
             <br />
             <br />
-            <Row style={{paddingBottom:'50px',paddingTop:'20px'}}>
+            <Row style={{paddingBottom:'50px',paddingTop:'20px',backgroundColor:'#d3d3d3'}}>
                 <Col md={6} style={{paddingRight:'0px'}}>
                 <i className="fa fa-phone fa-2x" style={{color:'rgb(51, 163, 47)'}}/><span style={{paddingLeft:'10px'}} className="call">9444222921</span>
                 <Col  style={{paddingLeft:'0px'}} className="contact">
@@ -29,9 +29,6 @@ import { Map, Marker, GoogleApiWrapper } from 'google-maps-react'
                 <span style={{paddingLeft:'15px'}} className="call">
                 Ramanathan St, Mahalingapuram, Nungambakkam, Chennai, Tamil Nadu 600034
                 </span>
-                <Col style={{paddingRight:'0px'}}>
-                <span className="call" >https://goo.gl/maps/rgQPkL3WPdxK1nGz5 </span>
-                </Col> 
                 </Col>
                 
             </Row>
