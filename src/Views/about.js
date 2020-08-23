@@ -14,9 +14,13 @@ import Alvar from '../Images/alvar.jpg'
                 </Carousel>
                 </Col>
             </Row>
-            <div >
-                  <h2 style={{color:'rgb(51, 163, 47)',paddingLeft:'50%'}}>About</h2>
-                  <h2 className="us">-----<span style={{color:'rgb(51, 163, 47)'}}>Us</span>-----</h2>
+            <div style={{paddingLeft:'30px',paddingTop:'20px'}}>
+            <h1 style={{color:'rgb(51, 163, 47)',fontFamily:'Garamond'}}> About Us</h1>
+            </div>
+            <div style={{paddingLeft:'70px',}}>
+            <h4 style={{fontFamily:'Andale Mono'}}>
+            We are a group of 4 friends who went to school together and ended up becoming Engineers, Doctors and Food Enthusiasts. The civil engineer among us was inspired by Nammalvar and attended his workshops and his Zero budget natural farming and in turn pulled us all into his fold and he started doing small scale natural farming operations. With multi-fold rise in common lifestyle diseases across our nation, the doctor among us insisted that we ought to have naturally grown food to overcome the avalanche of lifestyle diseases wiping out our families. Our parents who were already suffering from these effects made it a necessity for us to make the switch to this Organic way of life from the conventional path taken by the masses. It was more of a way to save us and our children from the impending ailments. Having benefited from the natural way of life, we thought of helping our community have access to quality natural farming products in making the last mile connectivity. As a result, we all came forward to create this initiative to serve our fellow people with care and started this venture Organic Care.
+            </h4>
             </div>
             <div style={{paddingLeft:'30px',paddingTop:'20px'}}>
                <h1 style={{color:'rgb(51, 163, 47)',fontFamily:'Garamond'}}> Our Mission</h1>

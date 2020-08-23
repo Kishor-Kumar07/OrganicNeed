@@ -144,12 +144,12 @@ function Header(){
       <i class="fa fa-caret-down"></i>
               </Button>
               <div class="dropdown-content">
-              <Link to='/category/rice'>Rice</Link>
-              <Link to='/category/spice'>Spices</Link>
-              <Link to='/category/oil'>Oil</Link>
-              <Link to='/category/nut'>Nuts</Link>
-              <Link to='/category/pulse'>Pulses</Link>
-              <Link to='/category/beauty'>Beauty Products</Link>
+              <Link to='/category/rice' style={{textDecoration:'none'}}>Rice</Link>
+              <Link to='/category/spice' style={{textDecoration:'none'}}>Spices</Link>
+              <Link to='/category/oil' style={{textDecoration:'none'}}>Oil</Link>
+              <Link to='/category/nut' style={{textDecoration:'none'}}>Nuts</Link>
+              <Link to='/category/pulse' style={{textDecoration:'none'}}>Pulses</Link>
+              <Link to='/category/beauty' style={{textDecoration:'none'}}>Beauty Products</Link>
     </div>
           </div>    
               
