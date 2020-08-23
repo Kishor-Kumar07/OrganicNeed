@@ -54,7 +54,7 @@ function Footer(props) {
                <i className="fa fa-facebook" aria-hidden="true"/>
                </Button>
                </a>
-               <a href="https://web.whatsapp.com" target="_blank">
+               <a href="https://www.linkedin.com/company/organiccare" target="_blank">
                    <Button style={{color:"rgb(51, 163, 47)",backgroundColor:'white'}}>
                <i className="fa fa-linkedin" aria-hidden="true"/>
                </Button>

@@ -6,7 +6,6 @@ import Products from '../Component/products.js'
 import Category from '../Component/carousel.js'
 import deliver from '../Images/delivery.jpg'
 import Footer from '../Component/footer.js'
-import {Link} from 'react-router-dom'
 class Home extends Component {
     constructor(props)
     {
@@ -91,10 +90,11 @@ class Home extends Component {
                <i className="fa fa-linkedin fa-2x" style={{color:'rgb(51, 163, 47)'}} /><br />
                <h4><span style={{color:'rgb(51, 163, 47)'}}>@Organic</span>Care</h4>
                <h5>Follow us on LinkedIn</h5><br />
+               <a href="https://www.linkedin.com/company/organiccare" target="_blank">
                <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}}>
             Follow Us
             </Button>  
-
+            </a>
            </CardText>
        </Card>
     </Col>
