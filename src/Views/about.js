@@ -16,9 +16,9 @@ import Alvar1 from '../Images/alvarabout.jpeg'
                 </Col>
             </Row>
             <div style={{paddingLeft:'30px',paddingTop:'20px'}}>
-            <h1 style={{color:'rgb(51, 163, 47)',fontFamily:'Washington'}}> About Us</h1>
+            <h1 style={{color:'rgb(51, 163, 47)',fontFamily:'Garamond'}}> About Us</h1>
             </div>
-            <div style={{paddingLeft:'70px',}}>
+            <div style={{paddingLeft:'70px'}}>
             <span style={{fontFamily:'Andale Mono',justifyContent:'center'}} className="call">
             We are a group of four friends who went to school together and ended up becoming Engineers, Doctors and Food Enthusiasts. The civil engineer among us was inspired by Nammalvar and attended his workshops and his Zero budget natural farming and in turn pulled us all into his fold and he started doing small scale natural farming operations.
             </span>

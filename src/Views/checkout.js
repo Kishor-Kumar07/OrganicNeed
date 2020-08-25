@@ -91,7 +91,7 @@ else
        <Label className="form-control" id='mobile' style={{borderColor:'white'}}>Mobile No</Label>
        </Col>
         <Col md={7} >
-       <input className="form-control" name="mobile" type='number'  id='mobile' placeholder='Mobile Number' ref={register({required:'mobile number required',pattern:{value:/^[0-9]{10}$/,message:'Invalid Mobile No'}})}/>
+       <input className="form-control" name="mobile" type='text'  id='mobile' placeholder='Mobile Number' ref={register({required:'mobile number required',pattern:{value:/^[0-9]{10}$/,message:'Invalid Mobile No'}})}/>
        {errors.mobile && <p style={{color:'red'}}>{errors.mobile.message}</p>}
        </Col>
        </Row>
