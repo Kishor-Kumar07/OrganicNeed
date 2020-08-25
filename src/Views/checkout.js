@@ -37,19 +37,20 @@ function Checkout() {
 if(loaded)
 return(
 <div>
-<span style={{color:'black',paddingLeft:'10%',paddingBottom:'10%', paddingTop:'70px'}} className="contact" >
-       We'll contact you before our next business day and we will let you know the time of delivery.  We will be calling you from +91 94442 22921.
-</span>
+
   <Row style={{margin:'0px',paddingTop:'70px'}}>
       <Col md={5} className="offset-md-4 offset-sm-4 offset-xs-4">
       <img src={deliver} className="deliver"/>
       </Col>
       </Row> 
-  <Row style={{margin:'0px',paddingTop:'30px'}}>   
+  <Row style={{margin:'0px',paddingTop:'30px',paddingBottom:'30px'}}>   
       <Col md={5} className="offset-md-4 offset-sm-4 offset-xs-4">
       <img src={thank} className="deliver" />
       </Col>
   </Row>
+  <span style={{color:'black',paddingLeft:'10%',paddingBottom:'10%', paddingTop:'70px'}} className="contact" >
+       We'll contact you before our next business day and we will let you know the time of delivery.  We will be calling you from +91 94442 22921.
+</span> 
 </div>
 )
 else
