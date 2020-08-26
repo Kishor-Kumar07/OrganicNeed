@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import {useStore} from '../Component/store'
 import {Container,Row,Col,Label} from 'reactstrap'
-import { useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form'
 import logo from '../Images/logo.png'
 import '../Styles/style.css'
 import axios from 'axios'
@@ -22,7 +22,9 @@ function Checkout() {
    const res= await axios.post('http://13.233.120.227:8080/api/users/register',{ name:data.name,
     email:data.email,
     phoneNumber:data.mobile,
-    address:data.address })
+    address:data.address,
+  paymentType:data.type })
+    console.log(res.data)
   const response = await axios.post('http://13.233.120.227:8080/api/orders',{
     user:res.data._id,
     orderItems:items,
