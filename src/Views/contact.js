@@ -2,7 +2,6 @@ import React from 'react'
 import { Container, Row, Col } from 'reactstrap';
 import { Carousel } from 'react-responsive-carousel';
 import contact from '../Images/contact.jpg'
-import { Map, Marker, GoogleApiWrapper } from 'google-maps-react'
  function Contact() {
     return (
         <Container style={{paddingTop:'40px'}}>

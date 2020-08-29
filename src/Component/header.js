@@ -9,34 +9,7 @@ import slider5 from '../Images/slider5.jpg'
 class Header extends Component {
     render() {
         return (
-            <Carousel infiniteLoop showStatus={false} showThumbs={false} autoPlay  renderArrowPrev={(onClickHandler, hasPrev, label) =>
-              hasPrev && (
-                <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)',position: 'absolute',
-                zIndex: 2,
-                top: 'calc(50% - 15px)',
-                width: 30,
-                height: 30,
-                cursor: 'pointer', left: 15}}>
-                  <i class="fa fa-angle-left  " aria-hidden="true" onClick={onClickHandler} title={label}  ></i>
-                      </Button>
-              )
-          }
-          renderArrowNext={(onClickHandler, hasNext, label) =>
-              hasNext && (
-                <Button style={{color:"white",backgroundColor:'rgb(51, 163, 47)',position: 'absolute',
-                zIndex: 2,
-                top: 'calc(50% - 15px)',
-                width: 30,
-                height: 30,
-                cursor: 'pointer', right: 15}}>
-                      <i class="fa fa-angle-right" aria-hidden="true" onClick={onClickHandler} title={label} ></i>
-                  </Button>
-              )
-          }>
-                {/* <div>
-                    <img src={slider1} />
-                   
-                </div> */}
+            <Carousel infiniteLoop showStatus={false} showThumbs={false} autoPlay >
                 <div>
                 <img src={slider2} />
                 </div> 

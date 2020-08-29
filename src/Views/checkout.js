@@ -49,9 +49,11 @@ return(
       <img src={thank} className="deliver" />
       </Col>
   </Row>
-  <span style={{color:'black',paddingLeft:'10%',paddingBottom:'10%', paddingTop:'70px'}} className="contact" >
+  <Row style={{margin:'0px',padding:'20px',alignItems:'center',justifyContent:'center'}}>
+    <span style={{textAlign:'center'}}>
        We'll contact you before our next business day and we will let you know the time of delivery.  We will be calling you from +91 94442 22921.
-</span> 
+    </span>
+  </Row>
 </div>
 )
 else
