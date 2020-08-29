@@ -22,7 +22,7 @@ function Footer(props) {
                         <li><Link style={{textDecoration:'none',color:'black'}} to="/category/nut">Nuts</Link></li>
                         <hr />
                         <li><Link style={{textDecoration:'none',color:'black'}} to="/category/beauty">Beauty Products</Link></li>
-                    
+                        <li><Link to='/category/mix' style={{textDecoration:'none'}}>Ready Mix</Link></li>
                      </ul>
                 </Col>
                 <Col md={3}>
