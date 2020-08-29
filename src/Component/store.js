@@ -8,6 +8,7 @@ import create from 'zustand'
     nut:[],
     spice:[],
     pulse:[],
+    mix:[],
     update: (prop) =>
     {
     set(state => 

@@ -17,6 +17,7 @@ updateprod(props.state.rice,'rice')
 updateprod(props.state.nut,'nut')
 updateprod(props.state.beauty,'beauty')
 updateprod(props.state.pulse,'pulse')
+updateprod(props.state.mix,'mix')
 return(
 <Container>
   <Row>

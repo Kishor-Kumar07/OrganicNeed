@@ -150,6 +150,7 @@ function Header(){
               <Link to='/category/nut' style={{textDecoration:'none'}}>Nuts</Link>
               <Link to='/category/pulse' style={{textDecoration:'none'}}>Pulses</Link>
               <Link to='/category/beauty' style={{textDecoration:'none'}}>Beauty Products</Link>
+              <Link to='/category/mix' style={{textDecoration:'none'}}>ReadyMix</Link>
     </div>
           </div>    
               

@@ -24,7 +24,6 @@ function Checkout() {
     phoneNumber:data.mobile,
     address:data.address,
   paymentType:data.type })
-    console.log(res.data)
   const response = await axios.post('http://13.233.120.227:8080/api/orders',{
     user:res.data._id,
     orderItems:items,

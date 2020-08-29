@@ -4,6 +4,7 @@ import '../Styles/style.css'
 import Header from '../Component/header.js'
 import Products from '../Component/products.js'
 import Category from '../Component/carousel.js'
+import Mix from '../Component/mix.js'
 import deliver from '../Images/delivery.jpg'
 import Footer from '../Component/footer.js'
 class Home extends Component {
@@ -17,20 +18,22 @@ class Home extends Component {
             pulse:[],
             rice:[],
             spice:[],
-            beauty:[]
+            beauty:[],
+            mix:[]
         }
     }
     async componentDidMount()
     {
-        var output,oil,rice,spice,pulse,beauty,nut;
+        var output,oil,rice,spice,pulse,beauty,nut,mix;
     output = await (await fetch('http://13.233.120.227:8080/api/products')).json()
     oil= await(await fetch('http://13.233.120.227:8080/api/products?category=Oil')).json()
+    mix= await(await fetch('http://13.233.120.227:8080/api/products?category=Readymix')).json()
     rice= await(await fetch('http://13.233.120.227:8080/api/products?category=Rice')).json()
     spice= await(await fetch('http://13.233.120.227:8080/api/products?category=Spices')).json()
     pulse= await(await fetch('http://13.233.120.227:8080/api/products?category=Pulses')).json()
     beauty= await(await fetch('http://13.233.120.227:8080/api/products?category=Beauty products')).json()
     nut= await(await fetch('http://13.233.120.227:8080/api/products?category=Nuts')).json()
-    this.setState({ prod: output,fetched:true,oil:oil,spice:spice,nut:nut,rice:rice,beauty:beauty,pulse:pulse })
+    this.setState({ prod: output,fetched:true,oil:oil,mix:mix,spice:spice,nut:nut,rice:rice,beauty:beauty,pulse:pulse })
     }
     render() {
         return (
@@ -48,6 +51,8 @@ class Home extends Component {
                     <Header />
                     </Col>
                 </Row>
+                <br /><br />
+                <Mix mix={this.state.mix}/>
                 <br /><br />
                 <Category state={this.state}/>
                 <br /><br />
