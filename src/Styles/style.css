@@ -35,9 +35,11 @@
 }
 .dropdown:hover .dropdown-content{
     display: block;
+    align-self: center;
 }
-.drpbtn:hover {
-  background-color:rgb(51, 163, 47);
+.drpbtn:hover .dropdown-content{
+  display: block;
+  align-self: center;
 }
 .dropdown-content {
   display: none;
@@ -54,7 +56,7 @@
   color: black;
   padding: 12px 16px;
   text-decoration: none;
-  display: block;
+  display:block;
   text-align: left;
 }
 

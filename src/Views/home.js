@@ -10,33 +10,7 @@ import Footer from '../Component/footer.js'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 class Home extends Component {
-    constructor(props)
-    {
-        super(props)
-        this.state={
-            prod:[],
-            oil:[],
-            nut:[],
-            pulse:[],
-            rice:[],
-            spice:[],
-            beauty:[],
-            mix:[]
-        }
-    }
-    async componentDidMount()
-    {
-        var output,oil,rice,spice,pulse,beauty,nut,mix;
-    output = await (await fetch('http://13.233.120.227:8080/api/products')).json()
-    oil= await(await fetch('http://13.233.120.227:8080/api/products?category=Oil')).json()
-    mix= await(await fetch('http://13.233.120.227:8080/api/products?category=Readymix')).json()
-    rice= await(await fetch('http://13.233.120.227:8080/api/products?category=Rice')).json()
-    spice= await(await fetch('http://13.233.120.227:8080/api/products?category=Spices')).json()
-    pulse= await(await fetch('http://13.233.120.227:8080/api/products?category=Pulses')).json()
-    beauty= await(await fetch('http://13.233.120.227:8080/api/products?category=Beauty products')).json()
-    nut= await(await fetch('http://13.233.120.227:8080/api/products?category=Nuts')).json()
-    this.setState({ prod: output,fetched:true,oil:oil,mix:mix,spice:spice,nut:nut,rice:rice,beauty:beauty,pulse:pulse })
-    }
+    
     render() {
         return (
             <div>
@@ -53,11 +27,11 @@ class Home extends Component {
                     </Col>
                 </Row>
                 <br /><br />
-                <Mix mix={this.state.mix}/>
+                <Mix />
                 <br /><br />
-                <Category state={this.state}/>
+                <Category />
                 <br /><br />
-                  <Products product={this.state.prod}/>
+                  <Products />
                   <br /><br />
                   <h4 className="text">Follow Us</h4>
                   <Container>

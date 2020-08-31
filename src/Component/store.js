@@ -2,6 +2,7 @@ import create from 'zustand'
 
  const [useStore] = create(set => ({
     product: [],
+    output:[],
     rice:[],
     oil:[],
     beauty:[],
@@ -14,13 +15,13 @@ import create from 'zustand'
     set(state => 
       ({product:[...state.product, prop]}))
  },
- plus:(index,product)=>{
+ plus:(index,product,prop)=>{
 set(state => 
-  ({product:product.filter(item=>item)}))
+  ({[prop]:product.filter(item=>item)}))
  },
- minus:(index,product)=>{
+ minus:(index,product,prop)=>{
   set(state => 
-    ({product:product.filter(item=>item)}))
+    ({[prop]:product.filter(item=>item)}))
    },
     updatetrash:(name) =>{
       set(state=> ({product:state.product.filter(item => item.englishname !== name)}))

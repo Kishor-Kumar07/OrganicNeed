@@ -24,7 +24,10 @@ const breakPoints = [
 }
   
   const update = useStore(state => state.update)
+  const plus = useStore(state => state.plus)
+  const minus = useStore(state => state.minus)
   const product = useStore(state => state.product)
+  const output = useStore(state => state.output)
   const [loading, setLoading] = useState(false)
   const togglemodal = () => setLoading(!loading);
   const TooltipItem = props => {
@@ -37,8 +40,6 @@ const breakPoints = [
       <span>
         <Button id={"Tooltip-" + id} style={{color:"white",backgroundColor:'rgb(51, 163, 47)'}} onClick={()=>{
        togglemodal()
-       item.count=item.count+1
-        item.total=item.count*item.price
       if(!product.includes(item))
       update(item)
      }}>
@@ -59,7 +60,7 @@ const breakPoints = [
     return(
 <div >
    <Container><Carousel loop enableAutoPlay={true} pagination={false} renderArrow={myArrow} breakPoints={breakPoints}>
- {props.product.map((x,id)=>(
+ {output.map((x,id)=>(
     <div>
          <Card style={{borderRadius:'10px'}}>
            <CardImg src={x.image} />
@@ -68,6 +69,20 @@ const breakPoints = [
             <span><i class="fa fa-inr" style={{paddingRight:'10px'}} />{x.price}</span>
             <br />
             <h6>({x.quantity})</h6>
+            <Button disabled={x.count<2} style={{backgroundColor:'white',paddingRight:'10px',borderColor:'white'}} onClick={()=>{
+      x.count-=1
+      x.total=x.count*x.price
+      minus(id,output,'output')}} 
+      ><i  class="fa fa-minus " style={{color:'red'}} />
+      </Button>
+      {x.count}
+      <Button style={{backgroundColor:'white',paddingLeft:'10px',borderColor:'white'}} onClick={()=>{
+      x.count+=1
+      x.total=x.count*x.price
+      plus(id,output,'output')}} 
+      >
+      <i class="fa fa-plus " style={{color:'green'}} />
+         </Button>
             <br />
             <TooltipItem key={id} item={x} id={id} />
            </CardText>

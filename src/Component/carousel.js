@@ -7,17 +7,9 @@ import beauty from '../Images/beauty.jpg'
 import spice from '../Images/spice.jpg'
 import pulses from '../Images/pulses.jpg'
 import {Link} from 'react-router-dom'
-import {useStore} from './store.js'
 
 function Carousel(props){
-const updateprod = useStore(state => state.updateprod)
-updateprod(props.state.oil,'oil')
-updateprod(props.state.spice,'spice')
-updateprod(props.state.rice,'rice')
-updateprod(props.state.nut,'nut')
-updateprod(props.state.beauty,'beauty')
-updateprod(props.state.pulse,'pulse')
-updateprod(props.state.mix,'mix')
+
 return(
 <Container>
   <Row>

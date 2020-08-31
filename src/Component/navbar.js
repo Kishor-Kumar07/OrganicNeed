@@ -63,14 +63,14 @@ function Header(){
     <h4 style={{paddingTop:'10px'}}><Button disabled={prod.count<2} style={{backgroundColor:'white',paddingRight:'10px',borderColor:'white'}} onClick={()=>{
       prod.count-=1
       prod.total=prod.count*prod.price
-      minus(i,product)}} 
+      minus(i,product,'product')}} 
       ><i  class="fa fa-minus " style={{color:'red'}} />
       </Button>
       {prod.count}
       <Button style={{backgroundColor:'white',paddingLeft:'10px',borderColor:'white'}} onClick={()=>{
       prod.count+=1
       prod.total=prod.count*prod.price
-      plus(i,product)}} 
+      plus(i,product,'product')}} 
       >
       <i class="fa fa-plus " style={{color:'green'}} />
          </Button><span style={{paddingLeft:'40px'}}><i class="fa fa-inr" style={{paddingRight:'10px'}} />{prod.total}</span></h4>
@@ -116,7 +116,22 @@ function Header(){
                 Blogs
                 </NavLink >
                  </a> 
-                
+                   <NavLink className='NavbarItem' >
+                 <div className="dropdown">
+              <Button className="dropbtn" style={{backgroundColor:'white',color:'grey',border:'none'}}>Categories
+      <i class="fa fa-caret-down"></i>
+              </Button>
+              <div className="dropdown-content">
+              <Link to='/category/rice' style={{textDecoration:'none'}} onClick={()=>onSetBar(false)}>Rice</Link>
+              <Link to='/category/spice' style={{textDecoration:'none'}} onClick={()=>onSetBar(false)}>Spices</Link>
+              <Link to='/category/oil' style={{textDecoration:'none'}} onClick={()=>onSetBar(false)}>Oil</Link>
+              <Link to='/category/nut' style={{textDecoration:'none'}} onClick={()=>onSetBar(false)}>Nuts</Link>
+              <Link to='/category/pulse' style={{textDecoration:'none'}} onClick={()=>onSetBar(false)}>Pulses</Link>
+              <Link to='/category/beauty' style={{textDecoration:'none'}} onClick={()=>onSetBar(false)}>Beauty Products</Link>
+              <Link to='/category/mix' style={{textDecoration:'none'}} onClick={()=>onSetBar(false)}>ReadyMix</Link>
+    </div>
+          </div>   
+          </NavLink> 
   </div>
   } onHideNav={() => onSetBar(false)} />
           </div>
@@ -139,11 +154,12 @@ function Header(){
                 Blogs
                 </NavItem >
                  </a> 
-                 <div class="dropdown">
-              <Button class="dropbtn" style={{backgroundColor:'white',color:'grey',border:'none'}}>Categories
+                 <NavItem>
+                 <div className="dropdown">
+              <Button className="dropbtn" style={{backgroundColor:'white',color:'grey',border:'none'}}>Categories
       <i class="fa fa-caret-down"></i>
               </Button>
-              <div class="dropdown-content">
+              <div className="dropdown-content">
               <Link to='/category/rice' style={{textDecoration:'none'}}>Rice</Link>
               <Link to='/category/spice' style={{textDecoration:'none'}}>Spices</Link>
               <Link to='/category/oil' style={{textDecoration:'none'}}>Oil</Link>
@@ -153,7 +169,7 @@ function Header(){
               <Link to='/category/mix' style={{textDecoration:'none'}}>ReadyMix</Link>
     </div>
           </div>    
-              
+          </NavItem>
             
             </Nav>
             </div>

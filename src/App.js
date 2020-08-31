@@ -1,54 +1,39 @@
-import React, { Component} from "react";
-import { Route, Switch } from "react-router-dom";
-import Navbar from './Component/navbar.js'
-import routes from "./route.js";
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUserGraduate, faHeart, faUsers, faHandPointRight } from '@fortawesome/free-solid-svg-icons';
-
-library.add(faUserGraduate, faHeart, faUsers, faHandPointRight);
-
-class Admin extends Component {
-
-  getRoutes = routes => {
-    return routes.map((prop, key) => {
-      return (
-        <Route
-          exact path={prop.path}
-          render={props => (
-            <prop.component
-              {...props}
-            />
-          )}
-          key={key}
-        />
-      );
-    });
+import React, { Component } from 'react'
+import Admin from './Admin'
+ class App extends Component {
+  constructor(props)
+  {
+      super(props)
+      this.state={
+          output:[],
+          oil:[],
+          nut:[],
+          pulse:[],
+          rice:[],
+          spice:[],
+          beauty:[],
+          mix:[]
+      }
   }
-  PageNotFound = () => {
-    return (
-    <div style={{padding:"70px",
-      textAlign:"center",
-      backgroundColor:"violet"
-    }} >
-      <h1>404</h1>
-      <h2>Page Not found</h2>
-      <p>We cannot find the page you are looking for</p>
-      </div>
-    );
-  };
-  /**/
+  async componentDidMount()
+  {
+      var output,oil,rice,spice,pulse,beauty,nut,mix;
+  output = await (await fetch('http://13.233.120.227:8080/api/products')).json()
+  oil= await(await fetch('http://13.233.120.227:8080/api/products?category=Oil')).json()
+  mix= await(await fetch('http://13.233.120.227:8080/api/products?category=Readymix')).json()
+  rice= await(await fetch('http://13.233.120.227:8080/api/products?category=Rice')).json()
+  spice= await(await fetch('http://13.233.120.227:8080/api/products?category=Spices')).json()
+  pulse= await(await fetch('http://13.233.120.227:8080/api/products?category=Pulses')).json()
+  beauty= await(await fetch('http://13.233.120.227:8080/api/products?category=Beauty products')).json()
+  nut= await(await fetch('http://13.233.120.227:8080/api/products?category=Nuts')).json()
+  this.setState({ output: output,fetched:true,oil:oil,mix:mix,spice:spice,nut:nut,rice:rice,beauty:beauty,pulse:pulse })
+  }
   render() {
     return (
-      <div className="wrapper">
-        <div id="main-panel" className="main-panel" ref="mainPanel">
-          <Navbar />
-          <Switch>{this.getRoutes(routes)}
-          <Route component={this.PageNotFound} />
-          </Switch>
-        </div>
+      <div>
+        <Admin state={this.state}/>
       </div>
-    );
+    )
   }
 }
-
-export default Admin;
+export default App;
