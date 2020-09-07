@@ -38,11 +38,12 @@ function Header(){
     product.map((prod,i)=>(
       total+=prod.total
     ))
-    const element =<div>
+    const element =
+    <ScrollArea horizontal={false} vertical={true}>
+    <div>
     <i class="fa fa-times-circle" style={{fontSize:'30px'}} onClick={()=>onSetSidebarOpen(false)}/>
     {product.length>0?
     (
-    <ScrollArea>
     <div style={{paddingTop:'30px',paddingLeft:'30px'}}>
     {product.map((prod,i)=>(
     <div>
@@ -88,7 +89,7 @@ function Header(){
     </Link> 
     </div>
      </div>
-     </ScrollArea>)
+     )
      :  
      <div style={{paddingLeft:'30%',paddingTop:'20%'}}>
        <i class="fa fa-shopping-cart fa-5x" aria-hidden="true"/>
@@ -96,7 +97,7 @@ function Header(){
      </div>
   }
      </div>
-    
+     </ScrollArea>
     return (
       <div>
         
@@ -173,14 +174,14 @@ function Header(){
             
             </Nav>
             </div>
-         
+         <span style={{paddingRight:'15px'}}>
          <span className="cart"><i  className="fa fa-shopping-bag fa-2x" style={{color:'rgb(51, 163, 47)'}} onClick={()=>onSetSidebarOpen(true)}/>
     <Badge style={{ position: "absolute" }} color="success">{product.length}</Badge></span>
-         
+    </span>
         </Navbar>
 
     <SideNav showNav={sidebarOpen} openFromRight="true" title="Organic Care Cart"   children={
-      element
+     element
     } onHideNav={() => onSetSidebarOpen(false)} />
       </div>
     );
